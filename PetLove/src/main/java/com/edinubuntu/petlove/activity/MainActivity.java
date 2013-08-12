@@ -73,7 +73,7 @@ public class MainActivity extends SherlockActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_refresh:
-                loadModel();
+                loadModel(false);
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -95,10 +95,10 @@ public class MainActivity extends SherlockActivity {
 
         adaptPetsModel = new AdaptPetsModel();
 
-        loadModel();
+        loadModel(false);
     }
 
-    private void loadModel() {
+    private void loadModel(final boolean more) {
         adaptPetsModel.load(new AsyncHttpResponseHandler() {
 
             @Override
@@ -111,6 +111,10 @@ public class MainActivity extends SherlockActivity {
             @Override
             public void onSuccess(String s) {
                 super.onSuccess(s);
+
+                if (!more) {
+                    recordsAdapter.clear();
+                }
 
                 RecordsJsonConverter recordsJsonConverter = new RecordsJsonConverter();
                 try {
