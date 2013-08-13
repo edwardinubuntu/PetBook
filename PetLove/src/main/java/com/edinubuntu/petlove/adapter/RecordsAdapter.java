@@ -51,8 +51,15 @@ public class RecordsAdapter extends ArrayAdapter<Record> {
 
         ImageView petImageView = (ImageView)contentView.findViewById(R.id.pet_image_view);
 
+        int height;
+        if (contentView.getWidth() == 0) {
+            height = petImageView.getHeight();
+        } else {
+            height = (int)(contentView.getWidth() * PetLove.IMAGE_VIEW_HEIGHT_SCALE_RATE);
+        }
+
         petImageView.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,
-                (int)(contentView.getWidth() * PetLove.IMAGE_VIEW_HEIGHT_SCALE_RATE)));
+                height));
 
         petImageView.setImageResource(R.drawable.ic_card);
         ImageLoader.getInstance().displayImage(record.getImageName(), petImageView);
