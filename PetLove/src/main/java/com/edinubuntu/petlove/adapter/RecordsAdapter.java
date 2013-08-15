@@ -1,6 +1,7 @@
 package com.edinubuntu.petlove.adapter;
 
 import android.content.Context;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,8 @@ import java.util.List;
 public class RecordsAdapter extends ArrayAdapter<Record> {
 
     protected LayoutInflater inflater;
+
+    private int columnPerPage;
 
     /**
      * Constructor
@@ -53,7 +56,8 @@ public class RecordsAdapter extends ArrayAdapter<Record> {
 
         int height;
         if (contentView.getWidth() == 0) {
-            height = petImageView.getHeight();
+            height = getColumnPerPage();
+            Log.d(PetLove.TAG, "Height: " + height);
         } else {
             height = (int)(contentView.getWidth() * PetLove.IMAGE_VIEW_HEIGHT_SCALE_RATE);
         }
@@ -71,5 +75,13 @@ public class RecordsAdapter extends ArrayAdapter<Record> {
         petDescriptionTextView.setText(record.getNote());
 
         return contentView;
+    }
+
+    public int getColumnPerPage() {
+        return columnPerPage;
+    }
+
+    public void setColumnPerPage(int columnPerPage) {
+        this.columnPerPage = columnPerPage;
     }
 }

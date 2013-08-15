@@ -90,6 +90,7 @@ public class MainActivity extends SherlockActivity {
         petsGridView.invalidateViews();
 
         recordsAdapter = new RecordsAdapter(MainActivity.this, android.R.layout.simple_list_item_1, recordList);
+        recordsAdapter.setColumnPerPage(GRID_VIEW_TWO_COLUMN_PER_PAGE_WIDTH);
 
         petsGridView.setAdapter(recordsAdapter);
 
