@@ -16,9 +16,6 @@ import com.edinubuntu.petlove.model.AdaptPetsModel;
 import com.edinubuntu.petlove.object.Record;
 import com.edinubuntu.petlove.util.converter.RecordsJsonConverter;
 import com.loopj.android.http.AsyncHttpResponseHandler;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import org.json.JSONException;
 
 import java.util.ArrayList;
@@ -43,14 +40,6 @@ public class MainActivity extends SherlockActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-
-        /**
-         * Initialize part
-         */
-        DisplayImageOptions imageOptions = new DisplayImageOptions.Builder().cacheInMemory().cacheOnDisc().build();
-        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(getApplicationContext())
-                .defaultDisplayImageOptions(imageOptions).build();
-        ImageLoader.getInstance().init(config);
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setLogo(R.drawable.ic_launcher);

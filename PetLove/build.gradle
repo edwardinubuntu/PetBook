@@ -19,13 +19,31 @@ android {
 
     defaultConfig {
         minSdkVersion 7
-        targetSdkVersion 16
+        targetSdkVersion 17
+    }
+
+    signingConfigs {f
+        releaseConfig {
+            storeFile file ("../pet-love.keystore")
+            storePassword StorePassword
+            keyAlias KeyAlias
+            keyPassword KeyPassword
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.releaseConfig
+            runProguard true
+            proguardFile '../proguard.cfg'
+        }
     }
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:13.0.+'
-    compile 'com.nostra13.universalimageloader:universal-image-loader:1.8.4'
-    compile 'com.prolificinteractive:actionbarsherlock:4.3.1'
+    compile 'com.android.support:support-v4:18.0.0'
+    compile 'com.googlecode.flickrj-android:flickrj-android:2.0.7'
+    compile 'com.squareup.picasso:picasso:1.1.1'
+    compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
     compile fileTree(dir: 'libs', include:'android-async-http-1.4.3.jar')
 }

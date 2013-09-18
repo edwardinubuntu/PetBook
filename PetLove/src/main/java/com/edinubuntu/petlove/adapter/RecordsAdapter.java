@@ -1,7 +1,6 @@
 package com.edinubuntu.petlove.adapter;
 
 import android.content.Context;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +12,7 @@ import android.widget.TextView;
 import com.edinubuntu.petlove.PetLove;
 import com.edinubuntu.petlove.R;
 import com.edinubuntu.petlove.object.Record;
-import com.nostra13.universalimageloader.core.ImageLoader;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -65,8 +64,11 @@ public class RecordsAdapter extends ArrayAdapter<Record> {
         petImageView.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,
                 height));
 
-        petImageView.setImageResource(R.drawable.ic_card);
-        ImageLoader.getInstance().displayImage(record.getImageName(), petImageView);
+        // Load image here
+        Picasso.with(getContext())
+                .load(record.getImageName())
+                .placeholder(R.drawable.ic_card)
+                .into(petImageView);
 
         TextView petNameTextView = (TextView)contentView.findViewById(R.id.pet_name_text_view);
         petNameTextView.setText(record.getName());
