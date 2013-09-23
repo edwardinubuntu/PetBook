@@ -9,6 +9,8 @@ import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
+import com.activeandroid.ActiveAndroid;
+import com.activeandroid.query.Select;
 import com.edinubuntu.petlove.PetLove;
 import com.edinubuntu.petlove.R;
 import com.edinubuntu.petlove.adapter.RecordsAdapter;
@@ -86,6 +88,12 @@ public class MainActivity extends SherlockActivity {
         adaptPetsModel = new AdaptPetsModel();
 
         loadModel(false);
+        loadLocalStorage(false);
+    }
+
+    private void loadLocalStorage(final boolean more) {
+        java.util.List<Record> recordList = new Select().from(Record.class).execute();
+        dataToViews(recordList);
     }
 
     private void loadModel(final boolean more) {
@@ -112,17 +120,29 @@ public class MainActivity extends SherlockActivity {
 
                     recordList = recordsJsonConverter.getRecords();
 
+                    ActiveAndroid.beginTransaction();
                     for (Record record : recordList) {
-                        recordsAdapter.insert(record, recordsAdapter.getCount());
+                        // Check before save
+                        Record savedRecord = new Select().from(Record.class).where("RecordId = ?", record.getRecordId()).executeSingle();
+                        if (savedRecord == null) {
+                            record.save();
+                            Log.d(PetLove.TAG, "One record saved. Id: "+record.getRecordId());
+                        }
+                    }
+                    ActiveAndroid.setTransactionSuccessful();
+
+                    // Update data to views
+                    if (recordsAdapter.getCount() == 0 && recordList.size() > 0) {
+                        dataToViews(recordList);
                     }
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                     Log.e(PetLove.TAG, e.toString());
                     Toast.makeText(MainActivity.this, e.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+                } finally {
+                    ActiveAndroid.endTransaction();
                 }
-
-                recordsAdapter.notifyDataSetChanged();
             }
 
             @Override
@@ -137,6 +157,13 @@ public class MainActivity extends SherlockActivity {
                 updateRefreshItem();
             }
         });
+    }
+
+    private void dataToViews(java.util.List<Record> recordList) {
+        for (Record record : recordList) {
+            recordsAdapter.insert(record, recordsAdapter.getCount());
+        }
+        recordsAdapter.notifyDataSetChanged();
     }
 
     @Override

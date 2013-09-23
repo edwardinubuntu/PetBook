@@ -29,11 +29,13 @@ public class RecordsJsonConverter {
             JSONObject recordObject = recordsArray.getJSONObject(index);
 
             Record record = new Record();
+            record.setRecordId(Integer.parseInt(recordObject.getString("_id")));
             record.setAcceptNumber(recordObject.getString("AcceptNum"));
             record.setSterilization(recordObject.getString("IsSterilization"));
             record.setImageName(recordObject.getString("ImageName"));
             record.setName(recordObject.getString("Name"));
             record.setNote(recordObject.getString("Note"));
+            record.setSex(recordObject.getString("Sex"));
 
             Log.d(PetLove.TAG, "Each record: "+record);
 

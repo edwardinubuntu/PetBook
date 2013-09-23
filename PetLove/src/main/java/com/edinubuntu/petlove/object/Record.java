@@ -1,29 +1,73 @@
 package com.edinubuntu.petlove.object;
 
+import com.activeandroid.Model;
+import com.activeandroid.annotation.Column;
+import com.activeandroid.annotation.Table;
+
 /**
  * Created by edward_chiang on 13/8/12.
  */
-public class Record {
+@Table(name = "Records")
+public class Record extends Model {
 
+    @Column(name = "AcceptNumber")
     private String acceptNumber;
-    private int id;
+
+    @Column(name = "RecordId")
+    private int recordId;
+
+    @Column(name = "Name")
     private String name;
+
+    @Column(name = "Sex")
     private String sex;
+
+    @Column(name = "Type")
     private String type;
+
+    @Column(name = "Build")
     private String build;
+
+    @Column(name = "Age")
     private String age;
+
+    @Column(name = "Variety")
     private String variety;
+
+    @Column(name = "Reason")
     private String reason;
+
+    @Column(name = "ChipNumber")
     private String chipNumber;
+
+    @Column(name = "IsSterilization")
     private String isSterilization;
+
+    @Column(name = "HairType")
     private String hairType;
+
+    @Column(name = "Note")
     private String note;
+
+    @Column(name = "Resettlement")
     private String resettlement;
+
+    @Column(name = "Phone")
     private String phone;
+
+    @Column(name = "Email")
     private String email;
+
+    @Column(name = "ChildreAnlog")
     private String childreAnlong;
+
+    @Column(name = "AnimalAnlong")
     private String animalAnlong;
+
+    @Column(name = "bodyWeight")
     private String bodyWeight;
+
+    @Column(name = "ImageName")
     private String imageName;
 
     public String getAcceptNumber() {
@@ -34,12 +78,12 @@ public class Record {
         this.acceptNumber = acceptNumber;
     }
 
-    public int getId() {
-        return id;
+    public int getRecordId() {
+        return recordId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setRecordId(int recordId) {
+        this.recordId = recordId;
     }
 
     public String getName() {
@@ -208,7 +252,7 @@ public class Record {
     public String toString() {
         return "Record{" +
                 "acceptNumber='" + acceptNumber + '\'' +
-                ", id=" + id +
+                ", recordId=" + recordId +
                 ", name='" + name + '\'' +
                 ", sex='" + sex + '\'' +
                 ", type='" + type + '\'' +

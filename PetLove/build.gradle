@@ -46,4 +46,5 @@ dependencies {
     compile 'com.squareup.picasso:picasso:1.1.1'
     compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
     compile fileTree(dir: 'libs', include:'android-async-http-1.4.3.jar')
+    compile fileTree(dir: 'libs', include:'ActiveAndroid.jar')
 }
