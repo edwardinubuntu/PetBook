@@ -10,7 +10,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
@@ -63,11 +62,6 @@ public class MainActivity extends SherlockFragmentActivity
 
         drawerActionList = new ArrayList<DrawerAction>();
         drawerListViewAdapter = new DrawerActionsAdapter(this, drawerActionList);
-
-        View settingView = getLayoutInflater().inflate(R.layout.drawer_list_item, null);
-        TextView textView = (TextView)settingView.findViewById(R.id.drawer_list_item_text_view);
-        textView.setText("Settings");
-        drawerListView.addFooterView(settingView);
 
         drawerListView.setAdapter(drawerListViewAdapter);
         drawerListView.setOnItemClickListener(new ListView.OnItemClickListener() {

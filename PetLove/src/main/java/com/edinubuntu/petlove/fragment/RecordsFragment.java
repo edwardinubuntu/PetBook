@@ -1,5 +1,7 @@
 package com.edinubuntu.petlove.fragment;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -91,6 +93,21 @@ public class RecordsFragment extends SherlockFragment implements ActiveObjectsLo
                     case DROP_ITEM_SELECTION_ALL:
                         java.util.List<Record> recordList = new Select().from(Record.class).execute();
                         refreshObjectsToViews(recordList);
+
+                        if (recordList.isEmpty()) {
+                            new AlertDialog.Builder(getSherlockActivity())
+                                    .setTitle(getResources().getString(R.string.records_download_from_https_title))
+                                    .setMessage(getResources().getString(R.string.records_download_from_https_message))
+                                    .setPositiveButton(R.string.dialog_yes, new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            loadObjects(adaptPetsModel, false);
+                                        }
+                                    })
+                                    .setNegativeButton(R.string.dialog_no, null)
+                                    .show();
+                        }
+
                         break;
                     case DROP_ITEM_SELECTION_DOG:
                         java.util.List<Record> dogList = new Select().from(Record.class).where("type='"+
@@ -165,7 +182,7 @@ public class RecordsFragment extends SherlockFragment implements ActiveObjectsLo
                     inputStream.close();
 
                     Log.d(PetLove.TAG, "Pet file: " + contentBuffer.toString());
-                    loadJsonResult(contentBuffer.toString());
+                    loadJsonResult(contentBuffer.toString(), true);
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -199,7 +216,7 @@ public class RecordsFragment extends SherlockFragment implements ActiveObjectsLo
                 if (!more) {
                     recordsAdapter.clear();
                 }
-                loadJsonResult(s);
+                loadJsonResult(s, true);
             }
 
             @Override
@@ -238,7 +255,7 @@ public class RecordsFragment extends SherlockFragment implements ActiveObjectsLo
         }
     }
 
-    private void loadJsonResult(String s) {
+    private void loadJsonResult(String s, boolean saveData) {
         RecordsJsonConverter recordsJsonConverter = new RecordsJsonConverter();
 
         ActiveAndroid.beginTransaction();
@@ -246,15 +263,22 @@ public class RecordsFragment extends SherlockFragment implements ActiveObjectsLo
             recordsJsonConverter.convert(s);
 
             List<Record> recordList = recordsJsonConverter.getRecords();
-            for (Record record : recordList) {
-                // Check before save
-                Record savedRecord = new Select().from(Record.class).where("RecordId = ?", record.getRecordId()).executeSingle();
-                if (savedRecord == null) {
-                    record.save();
-                    Log.d(PetLove.TAG, "One record saved. Id: " + record.getRecordId());
+
+            if (saveData) {
+                int savedCount = 0;
+                for (Record record : recordList) {
+                    // Check before save
+                    Record savedRecord = new Select().from(Record.class).where("RecordId = ?", record.getRecordId()).executeSingle();
+                    if (savedRecord == null) {
+                        record.save();
+                        savedCount++;
+                        Log.d(PetLove.TAG, "One record saved. Id: " + record.getRecordId());
+                    }
                 }
+                ActiveAndroid.setTransactionSuccessful();
+
+                Toast.makeText(getSherlockActivity(), getString(R.string.records_download_saved) + savedCount, Toast.LENGTH_LONG).show();
             }
-            ActiveAndroid.setTransactionSuccessful();
 
             // Update data to views
             if (recordsAdapter.getCount() == 0 && recordList.size() > 0) {
