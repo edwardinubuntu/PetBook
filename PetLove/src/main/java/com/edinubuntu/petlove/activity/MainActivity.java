@@ -1,11 +1,14 @@
 package com.edinubuntu.petlove.activity;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.GridView;
-import android.widget.Toast;
+import android.view.View;
+import android.widget.*;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
@@ -15,9 +18,11 @@ import com.activeandroid.query.Select;
 import com.edinubuntu.petlove.PetLove;
 import com.edinubuntu.petlove.R;
 import com.edinubuntu.petlove.active.ActiveObjectsLoader;
+import com.edinubuntu.petlove.adapter.DrawerActionsAdapter;
 import com.edinubuntu.petlove.adapter.RecordsAdapter;
 import com.edinubuntu.petlove.model.AdaptPetsModel;
 import com.edinubuntu.petlove.model.AsyncModel;
+import com.edinubuntu.petlove.object.DrawerAction;
 import com.edinubuntu.petlove.object.Record;
 import com.edinubuntu.petlove.util.converter.RecordsJsonConverter;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -32,6 +37,16 @@ import java.util.List;
 
 public class MainActivity extends SherlockActivity
         implements ActiveObjectsLoader<Record> {
+
+    private DrawerLayout drawerLayout;
+
+    private ListView drawerListView;
+
+    private ActionBarDrawerToggle drawerToggle;
+
+    private ArrayList<DrawerAction> drawerActionList;
+
+    private DrawerActionsAdapter drawerListViewAdapter;
 
     private AdaptPetsModel adaptPetsModel;
 
@@ -60,7 +75,9 @@ public class MainActivity extends SherlockActivity
         ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
         actionBar.setLogo(R.drawable.ic_launcher);
+        actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setDisplayShowTitleEnabled(false);
+        actionBar.setHomeButtonEnabled(true);
 
         // Setup Grid view width
         DisplayMetrics metrics = getResources().getDisplayMetrics();
@@ -116,12 +133,86 @@ public class MainActivity extends SherlockActivity
 
         petsGridView.setAdapter(recordsAdapter);
 
-        adaptPetsModel = new AdaptPetsModel();
+        drawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
+        drawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
 
+        drawerListView = (ListView)findViewById(R.id.left_drawer);
+
+        drawerActionList = new ArrayList<DrawerAction>();
+        drawerListViewAdapter = new DrawerActionsAdapter(this, drawerActionList);
+
+        drawerListView.setAdapter(drawerListViewAdapter);
+        drawerListView.setOnItemClickListener(new ListView.OnItemClickListener() {
+            /**
+             * Callback method to be invoked when an item in this AdapterView has
+             * been clicked.
+             * <p/>
+             * Implementers can call getItemAtPosition(position) if they need
+             * to access the data associated with the selected item.
+             *
+             * @param parent   The AdapterView where the click happened.
+             * @param view     The view within the AdapterView that was clicked (this
+             *                 will be a view provided by the adapter)
+             * @param position The position of the view in the adapter.
+             * @param id       The row id of the item that was clicked.
+             */
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                drawerListView.setItemChecked(position, true);
+                drawerLayout.closeDrawer(drawerListView);
+
+                getSupportActionBar().setDisplayShowTitleEnabled(false);
+                getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
+
+                // If user profile them open user
+                DrawerAction drawerAction = drawerActionList.get(position);
+
+                if (drawerAction.getActionType() == DrawerAction.ActionType.HOME) {
+
+                }
+
+                if (drawerAction.getActionType() == DrawerAction.ActionType.USER_PROFILE) {
+                }
+            }
+        });
+
+        drawerToggle = new ActionBarDrawerToggle(
+                this,
+                drawerLayout,
+                R.drawable.ic_drawer,
+                R.string.drawer_open,
+                R.string.drawer_close) {
+
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                super.onDrawerClosed(drawerView);
+                getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
+                getSupportActionBar().setDisplayShowTitleEnabled(false);
+                invalidateOptionsMenu();
+            }
+
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+                getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
+                getSupportActionBar().setDisplayShowTitleEnabled(true);
+                invalidateOptionsMenu();
+            }
+        };
+
+        drawerLayout.setDrawerListener(drawerToggle);
+
+        // Refresh when all object initialize.
+        refreshDrawerActions();
+
+        adaptPetsModel = new AdaptPetsModel();
 
         java.util.List<Record> recordList = selectObjects(false);
         refreshObjectsToViews(recordList);
         loadObjects(adaptPetsModel, false);
+
+        drawerToggle.syncState();
     }
 
     @Override
@@ -133,8 +224,30 @@ public class MainActivity extends SherlockActivity
     }
 
     @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        boolean drawerOpen = drawerLayout.isDrawerOpen(drawerListView);
+        menu.findItem(R.id.action_refresh).setVisible(!drawerOpen);
+        return super.onPrepareOptionsMenu(menu);
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        drawerToggle.onConfigurationChanged(newConfig);
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.homeAsUp:
+            case android.R.id.home:
+                boolean drawerOpen = drawerLayout.isDrawerOpen(drawerListView);
+                if (drawerOpen) {
+                    drawerLayout.closeDrawer(drawerListView);
+                } else {
+                    drawerLayout.openDrawer(drawerListView);
+                }
+                break;
             case R.id.action_refresh:
                 loadObjects(adaptPetsModel, false);
                 break;
@@ -260,5 +373,17 @@ public class MainActivity extends SherlockActivity
         } finally {
             ActiveAndroid.endTransaction();
         }
+    }
+
+    private void refreshDrawerActions() {
+        drawerActionList.clear();
+        drawerActionList.add(new DrawerAction(getString(R.string.drawer_home), DrawerAction.ActionType.HOME));
+        drawerActionList.add(new DrawerAction(getString(R.string.drawer_profile), DrawerAction.ActionType.USER_PROFILE));
+        drawerActionList.add(new DrawerAction(getString(R.string.drawer_todo_list), DrawerAction.ActionType.TODO_LIST));
+        drawerActionList.add(new DrawerAction(getString(R.string.drawer_friends), DrawerAction.ActionType.FRIENDS));
+        drawerActionList.add(new DrawerAction(getString(R.string.drawer_records), DrawerAction.ActionType.PET_ALL_RECORDS));
+
+        drawerListViewAdapter.setObjectList(drawerActionList);
+        drawerListViewAdapter.notifyDataSetChanged();
     }
 }

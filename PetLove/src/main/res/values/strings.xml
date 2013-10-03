@@ -10,4 +10,12 @@
 	<string name="dropdown_selection_dog">狗狗</string>
 	<string name="dropdown_selection_cat">貓咪</string>
 
+	<string name="drawer_open">開啓</string>
+	<string name="drawer_close">關閉</string>
+	<string name="drawer_home">首頁</string>
+	<string name="drawer_profile">資料與紀錄</string>
+	<string name="drawer_todo_list">待辦事項</string>
+	<string name="drawer_friends">好友的寵物</string>
+	<string name="drawer_records">市集</string>
+
 </resources>

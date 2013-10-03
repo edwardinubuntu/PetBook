@@ -1,11 +1,13 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
     tools:context=".MainActivity">
 
-	<GridView android:layout_width="fill_parent"
-	          android:layout_height="fill_parent"
+	<GridView android:layout_width="match_parent"
+	          android:layout_height="match_parent"
 	          android:numColumns="auto_fit"
 	          android:stretchMode="columnWidth"
 	          android:horizontalSpacing="10dp"
@@ -13,4 +15,19 @@
               android:id="@+id/records_grid_view"
 	          android:layout_margin="10dp"
 		/>
-</RelativeLayout>
+
+	<FrameLayout
+		android:id="@+id/content_frame"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" />
+
+	<ListView
+		android:id="@+id/left_drawer"
+		android:layout_width="240dp"
+		android:layout_height="match_parent"
+		android:layout_gravity="start"
+		android:choiceMode="singleChoice"
+		android:divider="@color/list_view_divider_gray"
+		android:dividerHeight="1dp"
+		android:background="@color/list_view_drawer_gray"/>
+</android.support.v4.widget.DrawerLayout>
