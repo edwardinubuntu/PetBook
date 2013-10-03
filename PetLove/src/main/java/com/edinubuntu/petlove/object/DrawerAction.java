@@ -41,7 +41,7 @@ public class DrawerAction {
         } else if (getActionType() == ActionType.PET_ALL_RECORDS) {
             imageResource = R.drawable.ic_action_search;
         } else if (getActionType() == ActionType.FRIENDS) {
-            imageResource = R.drawable.ic_action_users;
+            imageResource = R.drawable.ic_action_star_10;
         } else if (getActionType() == ActionType.TODO_LIST) {
             imageResource = R.drawable.ic_action_bookmark;
         }

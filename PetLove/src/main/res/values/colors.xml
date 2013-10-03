@@ -7,4 +7,5 @@
 	<color name="list_view_divider_gray">#595959</color>
 	<color name="list_view_drawer_gray">#404040</color>
 	<color name="text_white">#FFFFFF</color>
+	<color name="background_gray">#CFCFCF</color>
 </resources>
