@@ -1,0 +1,9538 @@
+
+
+{
+
+   * 
+help: "Search a datastore table. The datastore_search action allows a user to search data in a resource. :param resource_id: id or alias of the resource to be searched against. :type resource_id: string :param filters: matching conditions to select, e.g {"key1": "a", "key2": "b"} :type filters: dictionary :param q: full text query :type q: string :param plain: treat as plain text query (default: true) :type plain: bool :param language: language of the full text query (default: english) :type language: string :param limit: maximum number of rows to return (default: 100) :type limit: int :param offset: offset this number of rows :type offset: int :param fields: fields to return (default: all fields in original order) :type fields: list or comma separated string :param sort: comma separated field names with ordering e.g.: "fieldname1, fieldname2 desc" :type sort: string **Results:** The result of this action is a dict with the following keys: :rtype: A dictionary with the following keys :param fields: fields/columns and their extra metadata :type fields: list of dictionaries :param offset: query offset value :type offset: int :param limit: query limit value :type limit: int :param filters: query filters :type filters: list of dictionaries :param total: number of total matching records :type total: int    :param records: list of matching results :type records: list of dictionaries ",
+   * 
+success: true,
+   * 
+result: 
+-
+{
+      * 
+resource_id: "c57f54e2-8ac3-4d30-bce0-637a8968796e",
+      * 
+fields: 
+-
+[
+         * 
+
+-
+{
+            * 
+type: "int4",
+            * 
+id: "_id"
+},
+         * 
+
+-
+{
+            * 
+type: "text",
+            * 
+id: "Name"
+},
+         * 
+
+-
+{
+            * 
+type: "text",
+            * 
+id: "Sex"
+},
+         * 
+
+-
+{
+            * 
+type: "text",
+            * 
+id: "Type"
+},
+         * 
+
+-
+{
+            * 
+type: "text",
+            * 
+id: "Build"
+},
+         * 
+
+-
+{
+            * 
+type: "text",
+            * 
+id: "Age"
+},
+         * 
+
+-
+{
+            * 
+type: "text",
+            * 
+id: "Variety"
+},
+         * 
+
+-
+{
+            * 
+type: "text",
+            * 
+id: "Reason"
+},
+         * 
+
+-
+{
+            * 
+type: "text",
+            * 
+id: "AcceptNum"
+},
+         * 
+
+-
+{
+            * 
+type: "text",
+            * 
+id: "ChipNum"
+},
+         * 
+
+-
+{
+            * 
+type: "text",
+            * 
+id: "IsSterilization"
+},
+         * 
+
+-
+{
+            * 
+type: "text",
+            * 
+id: "HairType"
+},
+         * 
+
+-
+{
+            * 
+type: "text",
+            * 
+id: "Note"
+},
+         * 
+
+-
+{
+            * 
+type: "text",
+            * 
+id: "Resettlement"
+},
+         * 
+
+-
+{
+            * 
+type: "text",
+            * 
+id: "Phone"
+},
+         * 
+
+-
+{
+            * 
+type: "text",
+            * 
+id: "Email"
+},
+         * 
+
+-
+{
+            * 
+type: "text",
+            * 
+id: "ChildreAnlong"
+},
+         * 
+
+-
+{
+            * 
+type: "text",
+            * 
+id: "AnimalAnlong"
+},
+         * 
+
+-
+{
+            * 
+type: "text",
+            * 
+id: "Bodyweight"
+},
+         * 
+
+-
+{
+            * 
+type: "text",
+            * 
+id: "ImageName"
+}
+],
+      * 
+records: 
+-
+[
+         * 
+
+-
+{
+            * 
+AcceptNum: "102060922",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "小豬",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102060922",
+            * 
+Sex: "雌",
+            * 
+Note: "唷呵~大家好~我是新來的小豬，看我的鼻子是不是很像是小豬的鼻孔那麼大呢，覺得我可愛的話就快來把我領養回家吧！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾拾獲",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/52e39823-7711-48ce-a8e2-8769b244c226.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000176662",
+            * 
+_id: 1,
+            * 
+Type: "貓",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "2KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102060921",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "嫻嫻",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102060921",
+            * 
+Sex: "雌",
+            * 
+Note: "大家好唷，我也是新來的，我的名子叫嫻嫻，我看起來是不是很淑女呢，如果您喜歡我的話，請快點來動物之家領養我唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾拾獲",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/6ca9cd8c-2df4-42f2-8050-0d00feae7255.jpg",
+            * 
+HairType: "三花",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 2,
+            * 
+Type: "貓",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "3KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102060102",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "阿牛",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102060102",
+            * 
+Sex: "雄",
+            * 
+Note: "大家好嗎，阿牛又回來動物之家跟大家見面囉，我不在的這段時間有沒有覺得可惜的呀，有的話快來領養我喔，這次不要再錯過了。",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾不擬續養",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/40d5c581-a583-46f3-b651-a95caaf1cac0.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900128000668969",
+            * 
+_id: 3,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102053106",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "米米",
+            * 
+Variety: "米格魯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102053106",
+            * 
+Sex: "雌",
+            * 
+Note: "嗨嗨，我是米米唷，我是個輕熟女囉，我喜歡散步，您願意帶我回家一起去散步嗎？",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾不擬續養",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/2c237f30-b792-422d-831d-5f5620251628.jpg",
+            * 
+HairType: "三花",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 4,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102053101",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "堂堂",
+            * 
+Variety: "貴賓",
+            * 
+Age: "老年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102053101",
+            * 
+Sex: "雄",
+            * 
+Note: "大家好，我堂堂又回來囉，之前想領養我卻沒有領養到的人，要趕快來唷，不要再錯過這次的機會了！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾不擬續養",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/d6bdb57e-ffa7-4115-b272-91abb4754d8d.jpg",
+            * 
+HairType: "咖啡",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000176315",
+            * 
+_id: 5,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102053105",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "黏巴達",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102053105",
+            * 
+Sex: "雄",
+            * 
+Note: "大家好唷，我是超~~~~~黏人的黏巴達，如果您想要找一隻愛跟您撒嬌的貓咪的話，那就快點來把我帶回家就對囉！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/f6b67572-a337-43b3-8c34-7e1771a7ed23.jpg",
+            * 
+HairType: "黃",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 6,
+            * 
+Type: "貓",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "3KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102053102",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "跳跳虎",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102053102",
+            * 
+Sex: "雌",
+            * 
+Note: "是誰？是誰在叫我跳跳虎？是要帶我回家了嗎？等等我！我馬上飛奔過來唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/7ebf68fb-4118-428b-887d-b22fee32267e.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 7,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "15KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102052704",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "便便",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102052704",
+            * 
+Sex: "雄",
+            * 
+Note: "哇哈哈，我是便便，我是一個開心的小黑狗，我喜歡跟人一起遊戲，也需要一個願意陪我一起遊戲的主人，您願意嗎？",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/e6343648-18db-479d-953d-ede5cc0c0a22.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 8,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "17KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102052703",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "抖妹",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "102052703",
+            * 
+Sex: "雌",
+            * 
+Note: "大....大家好，我...我是抖妹，我個性比較害羞，請給我多一點的時間跟耐心來接近我唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/4e82abda-a597-4482-a258-d10ea559f256.jpg",
+            * 
+HairType: "虎斑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 9,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "18KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102052501",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "球球",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102052501",
+            * 
+Sex: "雌",
+            * 
+Note: "嗨嗨，愛運動玩球的球球來跟大家見面囉，大家想不想跟我一起玩球呀，如果您想的話，快點來動物之家找我，我在這裡等您來唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/ec7181dc-34fd-4e3b-b833-1acaba260439.jpg",
+            * 
+HairType: "黃",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 10,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "16KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102052304",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "斑斑",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102052304",
+            * 
+Sex: "雄",
+            * 
+Note: "嗨～我是可愛的斑斑，我是個乖巧的小帥哥唷，如果您也覺得我很帥的話，歡迎您來帶我回家唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/ef3120b8-2753-415c-ad28-c553eeb5eebe.jpg",
+            * 
+HairType: "虎斑白",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 11,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "5KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102052302",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "瓏月",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102052302",
+            * 
+Sex: "雌",
+            * 
+Note: "嗨~大家好唷，愛撒嬌的瓏月又來跟大家見面啦，我的招牌就是我的雙眼喔，我的雙眼可是陰陽眼呢，是不是非常的特別呀！喜歡我的話就快點來把我認養回家喔！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾不擬續養",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/10761afb-2820-47c4-8e3c-6d39223bbfdd.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000095073",
+            * 
+_id: 12,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102052204",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "奶奶",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102052204",
+            * 
+Sex: "雌",
+            * 
+Note: "大家好！我是奶奶，別以為我叫奶奶就以為我精神不好，看我站得多麼挺直，我可是還很有精神的呢！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/7b8a1270-b146-4160-890d-1f53eeead5c5.jpg",
+            * 
+HairType: "虎斑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 13,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "16KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102052102",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "冬瓜茶",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102052102",
+            * 
+Sex: "雄",
+            * 
+Note: "大家好!我是親人的小男生，因為我頭上有香香甜甜的冬瓜茶香氣，所以大家都叫我冬瓜茶!",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾不擬續養",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/5e1eacc0-d682-4334-9679-9a7b0319f344.jpg",
+            * 
+HairType: "棕白",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000176271",
+            * 
+_id: 14,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102052104",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "蘭菲",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "可,太小的較不建議",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雄",
+            * 
+Note: "蘭菲預估生日102年2月初個性:蘭帝、蘭菲二個都是男生,人工餵奶長大,與人親近,個性好活潑愛玩,天真無邪,有成為巨貓的潛力(是說橘貓都容易很大隻),希望能二隻一起被認養小貓活動力強,需能接受被貓弄亂房子已施打三合一疫苗,已除蚤認養人需年滿21歲,學生需家長陪同,需能接受認養前探訪(大台北地區優先)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/7759a8b2-69ed-445f-b200-0a746f4d8df4.jpg",
+            * 
+HairType: "黃白",
+            * 
+Build: "幼",
+            * 
+AnimalAnlong: "可,貓",
+            * 
+ChipNum: "",
+            * 
+_id: 15,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "1.5-2KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102052103",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "蘭帝",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "可,太小的較不建議",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雄",
+            * 
+Note: "蘭帝預估生日102年2月初個性:蘭帝、蘭菲二個都是男生,人工餵奶長大,與人親近,個性好活潑愛玩,天真無邪,有成為巨貓的潛力(是說橘貓都容易很大隻),希望能二隻一起被認養小貓活動力強,需能接受被貓弄亂房子已施打三合一疫苗,已除蚤認養人需年滿21歲,學生需家長陪同,需能接受認養前探訪(大台北地區優先)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/5101ca91-6d15-4bf8-a0f7-5027be7ff01a.jpg",
+            * 
+HairType: "黃白",
+            * 
+Build: "幼",
+            * 
+AnimalAnlong: "可,貓",
+            * 
+ChipNum: "",
+            * 
+_id: 16,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "1.5-2KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102052102",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "淑女",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "不建議",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雌",
+            * 
+Note: "淑女個性:活潑親人,與壯丁是同胎兄妹,建議有養過幼貓者較適合,家中若有幼兒或老人家較不適合(小貓成長期會非常好動活潑)年紀:預估102/3/7出生已施打三合一預防針及除蚤認養人需年滿21歲,學生需家長陪同,需能接受認養前探訪",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/aee52864-88d9-44f8-87e5-fd4ae747ef60.jpg",
+            * 
+HairType: "虎斑白",
+            * 
+Build: "幼",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 17,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "0.7-1KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102052101",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "壯丁",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雄",
+            * 
+Note: "壯丁個性:活潑親人,與淑女是同胎兄妹,建議有養過幼貓者較適合,家中若有幼兒或老人家較不適合(小貓成長期會非常好動活潑)年紀:預估102/3/7出生已施打三合一預防針及除蚤認養人需年滿21歲,學生需家長陪同,需能接受認養前探訪",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/93844876-619e-4368-810a-fc61c4a26f3f.jpg",
+            * 
+HairType: "虎斑白",
+            * 
+Build: "幼",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 18,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "1KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102051621",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "蛋餃",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102051621",
+            * 
+Sex: "雄",
+            * 
+Note: "嗨嗨~我的名子叫做蛋餃唷，是不是很可愛的名子呀，如果您覺得我不錯的話，歡迎來動物之家看看我唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/0f79920f-b550-4264-bb78-83e38aa84def.jpg",
+            * 
+HairType: "棕",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 19,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "17KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102051620",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "汪汪",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102051620",
+            * 
+Sex: "雄",
+            * 
+Note: "我的名子是汪汪，我是隻成熟穩重的狗狗唷，如果你想要一個會默默陪在你身邊的狗狗的話，快點來動物之家找我就對了！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/16765d97-c217-43fa-b22c-b4f2c3f0c6ee.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 20,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "17KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102051612",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "波波",
+            * 
+Variety: "米克斯",
+            * 
+Age: "老年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102051612",
+            * 
+Sex: "雌",
+            * 
+Note: "哈囉，大家好嗎？波波又來跟大家打招呼拉，喜歡我的人趕快來領養我吧，機會只有一次，要認養要快唷，先來先贏，不要錯過囉！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/9e1b38d9-c2f2-42ad-bec1-c89ca7bd1c4f.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 21,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "17KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122758",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "Rasta",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/284dac41-7a7a-4d86-9b61-78b5d93a4ea8.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 117,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102051308",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "黑嚕嚕",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102051308",
+            * 
+Sex: "雌",
+            * 
+Note: "呦呵~黑嚕嚕又上場囉，看我可愛的笑容，如果您把我領養回家，就可以每天看到我的笑容囉，是不是很心動阿，心動不如馬上行動唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/4cd5fbde-2ebf-4bfa-b9d6-77e4049d6acc.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "幼",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 22,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "3KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102051301",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "小艾",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102051301",
+            * 
+Sex: "雌",
+            * 
+Note: "哎呀，怎麼趁小艾在上廁所的時候偷拍人家，這樣我會害羞的呢，害我眼睛都不敢睜開了！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/5c6fcd66-4690-457d-90f7-7864a4b79cb9.jpg",
+            * 
+HairType: "虎斑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 23,
+            * 
+Type: "犬",
+            * 
+Email: "02-87913062",
+            * 
+Bodyweight: "16KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102050802",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "妹妹",
+            * 
+Variety: "梗犬",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102050802",
+            * 
+Sex: "雌",
+            * 
+Note: "我是妹妹，可不要看我可愛就衝過來唷，喜歡我的人可是要給我一點時間慢慢地接近我，要知道美麗的玫瑰花可是有刺的唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾不擬續養",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/ef3a6574-c757-4540-8869-a728922401b7.jpg",
+            * 
+HairType: "白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 24,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102050815",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "彼特",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102050815",
+            * 
+Sex: "雄",
+            * 
+Note: "大家好阿，又輪到我彼特來跟大家見面了，看我這強健的身軀，待在您身邊的時候可以讓您有安全感唷，快點來領養我回家吧！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/b05dddff-81fc-49d1-8424-c67a9f6a7671.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 25,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "20KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102050810",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "Kiss",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102050810",
+            * 
+Sex: "雌",
+            * 
+Note: "哈囉，我是愛撒嬌的KISS，我喜歡跟人要抱抱，如果您想要跟我抱抱的話，快來動物之家找我唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/c1c95785-09c5-411f-ae1a-75910345e52d.jpg",
+            * 
+HairType: "黑棕",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 26,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "20KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102050701",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "耿耿",
+            * 
+Variety: "梗犬",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102050701",
+            * 
+Sex: "雄",
+            * 
+Note: "哈囉!我是耿耿，我的個性親人喜歡和人互動，所以快來和我玩吧!",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾不擬續養",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/0b5138bc-f66d-40c8-adc5-f514b008ce08.jpg",
+            * 
+HairType: "黑棕",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000176333",
+            * 
+_id: 27,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102050203",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "阿嬌",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102050203",
+            * 
+Sex: "雌",
+            * 
+Note: "嗨~你好嗎?，我的名字叫阿嬌，我的個性親人喜歡和人互動，有空多來看看我吧!",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/07cdd0ef-41e9-47c5-9dbe-81713214b33d.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 28,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102043002",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "來恩",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102043002",
+            * 
+Sex: "雄",
+            * 
+Note: "各位安安唷，我叫做來恩，我是個活潑好動的小帥哥唷，如果您喜歡我的話，歡迎您來動物之家找我一起玩唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾不擬續養",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/48cc1f38-c0de-426b-8346-df9c309a25f0.jpg",
+            * 
+HairType: "黑棕",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000039700",
+            * 
+_id: 29,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102042918",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "Lucky",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102042918",
+            * 
+Sex: "雄",
+            * 
+Note: "哈哈，今天工作人員帶我Lucky出來散步，我好開心唷，因為我可是個活力充沛的運動型男孩呢！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾不擬續養",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/6a111f97-0a42-4243-b31d-828c8a0fea76.jpg",
+            * 
+HairType: "棕",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000039398",
+            * 
+_id: 30,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102042725",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "Candy",
+            * 
+Variety: "米克斯",
+            * 
+Age: "老年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102042725",
+            * 
+Sex: "雌",
+            * 
+Note: "哈囉，我是Candy唷，我已經在動物之家住了一個多月囉，怎麼都沒有人看上我呢，請大家多來看看我吧，您會發現其實我還蠻不錯的唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾不擬續養",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/308946f7-e00a-493e-83e7-bc81b8118981.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "0001C5825A",
+            * 
+_id: 31,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102042609",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "小英",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102042609",
+            * 
+Sex: "雌",
+            * 
+Note: "抬頭望向天空，今天天氣不錯耶，不知道今天會不會有人來動物之家看看可愛的小英我呢，真希望我生命中注定的主人能快點出現。",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/96724b92-6958-4dba-b9b1-75ce128b64b6.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 32,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "17KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102042501",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "豪豪",
+            * 
+Variety: "拉布拉多",
+            * 
+Age: "老年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102042501",
+            * 
+Sex: "雄",
+            * 
+Note: "前陣子天氣真好呀，大家有沒有跟豪豪一樣出來散散步呢，如果您想要找一個半陪您一起散步，可以來動物之家把我領養回家唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾拾獲",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/b875eb28-a5cc-4241-95a3-e9f984feceb5.jpg",
+            * 
+HairType: "棕",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000095498",
+            * 
+_id: 33,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102042408",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "棕棕",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102042408",
+            * 
+Sex: "雌",
+            * 
+Note: "唷呼~大家好呀，我是棕棕，第一次出場跟大家見面，我是個害羞的小女生唷，請大家有空多多來動物之家看看我唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/2783e2b8-73ad-4574-8cda-db0ae6b54a4e.jpg",
+            * 
+HairType: "棕",
+            * 
+Build: "幼",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 34,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "2KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102042404",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "莉莉",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102042404",
+            * 
+Sex: "雌",
+            * 
+Note: "大家安安呀，我是害羞內向的小女生莉莉，我正在動物之家等待新主人的到來唷，如果您想讓我陪在您的身邊，就請您快點來領養我回家唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/2b1d807d-b1a5-4d6f-90a6-6015c3043dda.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "幼",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 35,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "2KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102042302",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "阿讚",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102042302",
+            * 
+Sex: "雄",
+            * 
+Note: "你好!阿讚是我的名字，我的笑容很燦爛吧!我對每天都充滿了希望喔!我相信很快會有新的主人來帶我回家!",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/3e018928-1798-41bb-b5f8-6d35b0c6310d.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 36,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "12KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122757",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "西皮林 ",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/4e828cd5-051e-4555-8492-a46a332f124f.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 118,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102042210",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "趴趴",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102042210",
+            * 
+Sex: "雌",
+            * 
+Note: "唷呵，看這邊。我是害羞內向的趴趴，我需要一個有耐心的主人來陪伴我走向外面那繽紛的世界唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/b1f82493-e0e6-4454-ba8c-dc8113a2c588.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 37,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "16KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102042205",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "小B",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102042205",
+            * 
+Sex: "雄",
+            * 
+Note: "哈囉！愛撒嬌的小B又來跟大家見面囉，小B現在還在動物之家等待疼愛我的主人出現唷，如果您願意給小B滿滿的愛，就請您快來帶我回家喔！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/155afd72-cdf7-4e9b-ad29-0b9847097d55.jpg",
+            * 
+HairType: "棕",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 38,
+            * 
+Type: "犬",
+            * 
+Email: " tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "16KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102042203",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "哈姆",
+            * 
+Variety: "哈士奇",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102042203",
+            * 
+Sex: "雌",
+            * 
+Note: "我是活潑又貪吃的哈姆，您喜歡我嗎，喜歡我的話歡迎您來動物之家把我帶回家唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/89ec160e-4478-4fe3-a630-93e57062438c.jpg",
+            * 
+HairType: "黑棕",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 39,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "25KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102042106",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "阿華",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102042106",
+            * 
+Sex: "雄",
+            * 
+Note: "YO～YO～YO～～照過來！我是阿華，喜歡我深邃的眼矇嗎？來看看我吧！",
+            * 
+Phone: "02-87913254",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/c08a9f44-53c2-4720-b3a1-b8e25f56143c.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 40,
+            * 
+Type: "貓",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "1KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102041920",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "伊莎",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號10204192",
+            * 
+Sex: "雌",
+            * 
+Note: "哈囉，您好啊，我是害羞內向的伊莎，我正在尋找一個愛我的主人唷，如果您願意給我一個溫暖的家，我正在動物之家等您來唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/72b48717-f384-40bb-aaf3-5c886a17906d.jpg",
+            * 
+HairType: "棕白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 41,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "16KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102041606",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "GiGi",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102041606",
+            * 
+Sex: "雌",
+            * 
+Note: "我是GiGi，不要看我年紀小唷，我可是很有個性的喔，請您要靠近我的時候要慢慢來喔！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/76135be6-420d-4a69-b3ae-e3ab205308a2.jpg",
+            * 
+HairType: "虎斑",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 42,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "4KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102041505",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "Lena",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102041505",
+            * 
+Sex: "雌",
+            * 
+Note: "Lena又來跟大家打招呼囉，大家沒有忘記我吧，雖然我比較害羞內向，但是我還是希望趕快擁有一個疼愛我的主人唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/dc6b7645-7b86-43c1-8c6f-75a1f617f5b7.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 43,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "16KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102041419",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "皇皇",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102041419",
+            * 
+Sex: "雌",
+            * 
+Note: "大家好呀，我是皇皇，明天又是星期六囉，大家要不要考慮來動物之家找我一起玩呢？我在動物之家等您來唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/d490ce80-6f72-4749-b9d8-dca33924539a.jpg",
+            * 
+HairType: "棕白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 44,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "8KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102041313",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "大雄",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102041313",
+            * 
+Sex: "雄",
+            * 
+Note: "大家安安呀，我是大雄，我已經又在動物之家住了2個月多囉，這段時間志工姊姊有說我已經越來越乖了，所以請給我一個陪伴您的機會好嗎？",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾不擬續養",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/9036fc00-c75a-4d4d-afb2-71855f7aea79.jpg",
+            * 
+HairType: "棕白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000095472",
+            * 
+_id: 45,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102041207",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "ㄧㄚㄧㄚ",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102041207",
+            * 
+Sex: "雌",
+            * 
+Note: "哇哈哈，終於又輪到我囉，我是一ㄚㄧㄚ，我在期待一個願意帶我回家陪我一起玩的新主人出現，如果您願意當我的新主人，就請您快點來動物之家認養我唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/0a994053-5bc6-46e8-a7fb-907c57424718.jpg",
+            * 
+HairType: "棕黑",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 46,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "6KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102041113",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "豪斯",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102041113",
+            * 
+Sex: "雄",
+            * 
+Note: "嗨~我是豪斯，我現在正值壯年唷，如果您喜歡我的話，就趕快來把我領養回家吧！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/7922741f-9238-4459-bbd9-cffcc1f656da.jpg",
+            * 
+HairType: "虎斑白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 47,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "18KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102040709",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "啾啾",
+            * 
+Variety: "吉娃娃",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102040709",
+            * 
+Sex: "雄",
+            * 
+Note: "您好呀，我是啾啾，我是隻可愛的吉娃娃唷，我很聰明會認人唷，遇到不認識的人我可是會汪汪叫的呢！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾不擬續養",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/7e61bb9c-3102-483a-862b-f9c1a27beb42.jpg",
+            * 
+HairType: "黃白",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "158097007975417",
+            * 
+_id: 48,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102040414",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "花花",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102040414",
+            * 
+Sex: "雌",
+            * 
+Note: "大家晚安，我叫花花，我現在住在動物之家裡面，雖然我有點害羞，但是我還是願意讓您摸摸的唷，如果您喜歡我，歡迎您來這裡找我唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/51ae4baf-93e4-4030-b2a0-34497c65080b.jpg",
+            * 
+HairType: "三花",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 49,
+            * 
+Type: "貓",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "4KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102040316",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "泉泉",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102040316",
+            * 
+Sex: "雄",
+            * 
+Note: "你好!我的名字叫泉泉，我的個性比較內向安靜，對我要多點耐心喔!",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/84861edc-6384-4930-831b-c493d8669b78.jpg",
+            * 
+HairType: "棕白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "9001380000176389",
+            * 
+_id: 50,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "15KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102040314",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "歐德",
+            * 
+Variety: "米克斯",
+            * 
+Age: "老年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102040314",
+            * 
+Sex: "雄",
+            * 
+Note: "你好!我是歐德，我需要一個溫暖的家來養老，帶我回家好嗎?",
+            * 
+Phone: " 02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/6ec99c8c-679e-497c-90e3-fa1bd94d9e29.jpg",
+            * 
+HairType: "棕黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 51,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "17KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102032210",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "花生醬",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102032210",
+            * 
+Sex: "雌",
+            * 
+Note: "大家好，我是害羞內向的小女生花生醬，我需要一個充滿愛心與耐心的主人來帶領我走出外面的世界，您願意嗎？",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/675062f8-77e6-420f-bd27-fba72c298b65.jpg",
+            * 
+HairType: "虎斑",
+            * 
+Build: "幼",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 65,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "2KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102032907",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "蘭萬鳳",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雌",
+            * 
+Note: "永遠有"驚"的表情的萬鳳個性好,熟了很愛摸,也會呼叫你摸牠很愛逗貓棒,但常常抓不準,常常逗笑義工迷你身材,圓圓臉非常討人喜歡新手認養可,亦適合家庭飼養已絕育,已點除蚤藥註:認養人需年滿21歲,學生需家長同意,需能接受認養前探訪(大台北地區優先)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/24a0a0bb-601c-4dea-80e0-ab35ff385530.jpg",
+            * 
+HairType: "三花",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可,貓",
+            * 
+ChipNum: "",
+            * 
+_id: 52,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "3KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102032906",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "蘭芝心",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可,太小的較不建議",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雄",
+            * 
+Note: "親人溫馴瞇瞇眼白指套橘子男生~蘭芝心個性很乖又溫馴 會繞著人走來走去&叫人陪他玩身材修長已絕育,已點除蚤藥註:認養人需年滿21歲,學生需家長同意,需能接受認養前探訪(大台北地區優先)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/424c28cb-34d9-4fe9-9bff-2f4a33236bcb.jpg",
+            * 
+HairType: "黃白",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "可,貓",
+            * 
+ChipNum: "",
+            * 
+_id: 53,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "4-5KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102032905",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "空心菜",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雄",
+            * 
+Note: "空心菜體型大個性憨又溫柔,喜歡大貓咪的朋友不要錯過已絕育,點除蚤藥,已施打三合一疫苗註:認養人需年滿21歲,學生需家長同意,需能接受認養前探訪(貓目前在大溪)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/f5218a10-eafb-4b70-adae-efcf5d0910ee.jpg",
+            * 
+HairType: "虎斑白",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 54,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "6KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102032904",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "滷白菜",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雄",
+            * 
+Note: "滷白菜體型大個性憨,喜歡大貓咪的朋友不要錯過已絕育,點除蚤藥,已施打三合一疫苗註:認養人需年滿21歲,學生需家長同意,需能接受認養前探訪(貓目前在大溪)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/2c680367-5dee-485f-b9ad-c12340871584.jpg",
+            * 
+HairType: "虎斑白",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 55,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "6KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102032903",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "可賀",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "可,太小的較不建議",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雌",
+            * 
+Note: "穿小襪子的可賀(又名:賀小美)預估生日101年9月出生個性超好,陌生人可以摸可以抱,是個非常好的家居貓看到人會喵喵叫要人摸牠新手認養可,家中有老人或是小孩也可以已絕育,點除蚤藥,已施打三合一疫苗註:認養人需年滿21歲,學生需家長同意,需能接受認養前探訪(大台北地區優先)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/082e358e-650f-4328-b68b-8348b0216286.jpg",
+            * 
+HairType: "虎斑白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可,貓",
+            * 
+ChipNum: "",
+            * 
+_id: 56,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "3-4KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102032902",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "極品貓可喜",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "可,太小的較不建議",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雄",
+            * 
+Note: "個性超好的小鬍子乳牛貓-極品貓<可喜>預估生日101年9月出生個性超好,陌生人可以摸可以抱,是個非常好的家居貓,新手認養可,家中有老人或是小孩也可以已絕育,點除蚤藥,已施打三合一疫苗註:認養人需年滿21歲,學生需家長同意,需能接受認養前探訪(大台北地區優先)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/34dcd3b0-c514-405f-bca0-37eddb3d3f7d.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 57,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "3-4KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102032901",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "蘭萌萌",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雌",
+            * 
+Note: "夢幻色系迷你型小母貓-蘭萌萌左單眼有生病過,目前已痊癒,有點霧霧的,不影響生活個性稍緊張,熟了很可摸可抱,體型就小小的,迷你身材,無敵可愛搭配上夢幻色系的毛色,超美已絕育,固定點除蚤藥新手認養可,可與其它貓相處註:認養人需年滿21歲,學生需家長同意,需能接受認養前探訪(大台北地區優先)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/b6103682-62c6-4906-8906-9b1a991ce116.jpg",
+            * 
+HairType: "三花",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 58,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "2.5-3KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102032710",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "麻呂",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102032710",
+            * 
+Sex: "雌",
+            * 
+Note: "安安唷，我是麻呂，在我們四個兄弟姊妹裡面，只有我是最特別的喔，有發現嗎，只有我有黃色的毛呢，如此特別的我，正等待著特別的您來帶我回家唷！ ",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/3bf316c7-c619-4445-917e-34cc40a94617.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "幼",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 59,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "2KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102032709",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "幼幼",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102032709",
+            * 
+Sex: "雌",
+            * 
+Note: "嗨嗨，我是幼幼，我是個漂亮的小女生唷，我想要有個溫暖的家，如果您願意的話，請給我這個機會好嗎？",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/3ce9b0bb-a80b-43d0-8776-edfbc84355f1.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "幼",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000095347",
+            * 
+_id: 60,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "2KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102032708",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "修修",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102032708",
+            * 
+Sex: "雄",
+            * 
+Note: "哈囉，我是修修，我還是個小朋友喔，如果您喜歡我的話，歡迎您來動物之家把我領養回家唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/64291cd5-7386-4918-8211-89b907cc7e5a.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "幼",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000095328",
+            * 
+_id: 61,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "2KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102032707",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "奇奇",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102032707",
+            * 
+Sex: "雄",
+            * 
+Note: "嗨嗨，我是小正太奇奇，大家好呀！我很活潑好動唷，如果您需要一隻可愛的小狗來陪伴您，就快點來帶我回家吧！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/c3a699b8-ff69-427d-a8b8-ff15c3862ae0.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "幼",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000095325",
+            * 
+_id: 62,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "2KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102032212",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "芝麻醬",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102032212",
+            * 
+Sex: "雌",
+            * 
+Note: "各位好喔，我是芝麻醬，我的個性也是很緊張怕生，但是只要您多給我一點時間，我還是會勇敢地讓您摸摸的，所以您願意給我一個跟您一起回家的機會嗎？",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/5ff9eeb0-0c26-4488-82f6-775945f91d80.jpg",
+            * 
+HairType: "虎斑",
+            * 
+Build: "幼",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 63,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "2KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102032211",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "可可",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102032211",
+            * 
+Sex: "雌",
+            * 
+Note: "是誰在叫我的名子可可？是您嗎？叫我有什麼事情？是要帶我一起回家嗎？",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/dada77ec-f7eb-4833-bc3a-668042c4c28d.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "幼",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 64,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "2KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102031516",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "威風",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102031516",
+            * 
+Sex: "雄",
+            * 
+Note: "今天好嗎?我是威風，我會坐下跟握手喔!是不是既帥氣又聰明呀!快來認識我吧!",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾不擬續養",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/f305edce-614c-4e7d-8efc-28f574a8b66d.jpg",
+            * 
+HairType: "虎斑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "0006CD3B96",
+            * 
+_id: 66,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102031504",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "美乃滋",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102031504",
+            * 
+Sex: "雌",
+            * 
+Note: "大家好唷，我是美乃滋，我還是個小姑娘呢，看我的身材是不是維持得很好呀，如果您喜歡我的話，歡迎您來跟我約會唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/dfba28f0-1ddf-4902-98f3-f80a1c5c2f7a.jpg",
+            * 
+HairType: "棕",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 67,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "15KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102031312",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "小莊",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102031212",
+            * 
+Sex: "雄",
+            * 
+Note: "啊哈，輪到我小莊出場囉，大家好嗎？我最喜歡跟人一起玩了，大家有空的話都可以來動物家找我一起玩唷！我還會讓您摸我的肚肚唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/0440998e-cfb8-4496-b8e9-0d73fc13b050.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 68,
+            * 
+Type: "犬",
+            * 
+Email: " tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "13KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102030707",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "妙妙",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102030707",
+            * 
+Sex: "雌",
+            * 
+Note: "你好!我叫妙妙，我是個個性膽小的女生,我需要你多一點的耐心來感化我喔!",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/84d7064d-bd10-4909-8892-af7e55ad6221.jpg",
+            * 
+HairType: "棕白",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 69,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102030702",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "凱迪",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102030702",
+            * 
+Sex: "雄",
+            * 
+Note: "大家好，我是凱迪，雖然我在一次的車禍中失去了我的一隻後腳，但我還是非常堅強地活著唷，看我自信的笑容，是不是很讚呀！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾拾獲",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/2a8c1e7a-a398-4787-9f82-184e4145ebd9.jpg",
+            * 
+HairType: "虎斑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000095767",
+            * 
+_id: 70,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102030526",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "強尼",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102030526",
+            * 
+Sex: "雄",
+            * 
+Note: "嗨，大家還記得我嗎？沒錯！就是我強尼唷，這麼久沒來跟大家見面，有沒有人想我呀？想我的人快來動物之家找我一起玩唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾不擬續養",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/72e0a913-6afb-4bb2-94a3-3f9eb904cc2a.jpg",
+            * 
+HairType: "棕白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000095910",
+            * 
+_id: 71,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102030411",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "小夜",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102030411",
+            * 
+Sex: "雌",
+            * 
+Note: "我是小夜，我在動物之家已經住了三個月囉，我正在等待有人來把我帶回家，如果您願意的話，快來動物之家領養我喔！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/21f3e185-0f7e-401f-85dc-30388a254956.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000095629",
+            * 
+_id: 72,
+            * 
+Type: "貓",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "3KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102020807",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "媛媛",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102020807",
+            * 
+Sex: "雌",
+            * 
+Note: "喔嗨唷！我是媛媛，我有點怕生，但是我很可愛吧！希望你們可以來親近我喔！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/51de64e0-2264-4673-adcd-0de548d7b521.jpg",
+            * 
+HairType: "棕白",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000176222",
+            * 
+_id: 80,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "7KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102030301",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "松建",
+            * 
+Variety: "米克斯",
+            * 
+Age: "老年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102030301",
+            * 
+Sex: "雄",
+            * 
+Note: "大家好，我是松建，雖然我看起來非常的大隻，但是其實我是與人非常親近的喔，如果您覺得我不錯，快點來動物之家領養我吧！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/5a971a1a-f5b9-41e3-8812-af241dd1cf35.jpg",
+            * 
+HairType: "棕黑",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 73,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "25KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102030110",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "老爺",
+            * 
+Variety: "米克斯",
+            * 
+Age: "老年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102030110",
+            * 
+Sex: "雄",
+            * 
+Note: "您們好呀，我是老爺，其實是因為我太害羞了，所以這邊的志工姊姊幫我取名叫老爺，希望我能大氣一點，不要再那麼害羞了。",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/31dc9422-0220-4102-acc9-80e04a6e1149.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 74,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "18KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102022612",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "妮妮",
+            * 
+Variety: "米格魯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "台北巿動物之家 收容編號102022612",
+            * 
+Sex: "雌",
+            * 
+Note: "大家好呀，我是妮妮，我是個快樂的米格魯唷，除此之外，我還是個輕熟女呢，看我送秋波，是不是很嫵媚呀！(眨眼",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾不擬續養",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/0ffa9df1-1e57-41df-aad6-3a5302491518.jpg",
+            * 
+HairType: "三花",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000039972",
+            * 
+_id: 75,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102022602",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "米蘭",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "不建議",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雄",
+            * 
+Note: "長的超帥的米蘭年紀:預估2009年出生的貓咪個性:因為認養人因素被退養回協會,親人,但摸久會不太耐煩,適合養過貓的人飼養,已絕育註:認養人需年滿21歲,學生需家長同意,需能接受認養前家庭探訪(大台北地區優先)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/34b379f7-799e-4b6e-ae25-b5fe06db8988.jpg",
+            * 
+HairType: "虎斑白",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "可,貓",
+            * 
+ChipNum: "",
+            * 
+_id: 76,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "5-6KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102022210",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "比比",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102022210",
+            * 
+Sex: "雌",
+            * 
+Note: "唷吼，看這邊唷！我是比比，最近天氣都好好唷，大家有空的話可以來動物之家和我一起玩遊戲，我在動物之家等你們來喔！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/8c894160-a8a3-4b8a-9494-d5f98b51acb7.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000095768",
+            * 
+_id: 77,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "6KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102022106",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "辛蒂",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102022106",
+            * 
+Sex: "雌",
+            * 
+Note: "對面的人們看過來～看過來～～我是辛蒂，我是氣質文靜的女孩，我已經準備好跟你回家了！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/ecbee4f8-08cd-4c8b-9de2-c3d226675577.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000176251",
+            * 
+_id: 78,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "16KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102022010",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "至善",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102022010",
+            * 
+Sex: "雌",
+            * 
+Note: "你在看我嗎?我的名字叫至善,我的內心是善良可愛的!相信有一天你會來帶我回家的!",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/5f41df75-74d1-4029-8810-5eee243ab595.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "幼",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 79,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "3KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122761",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "Orca",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/31a3e5a5-1bc4-4bea-a7ef-85187d6c1118.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 114,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102020306",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "黑芝麻",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102020306",
+            * 
+Sex: "雌",
+            * 
+Note: "大家好，我是愛撒嬌的黑芝麻，我最喜歡有人摸我的肚肚了，如果您也想摸摸我的肚肚的話，歡迎您來動物之家找我唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/95e46d32-5585-4424-b6c6-d67d0968ebc4.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 81,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "5KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102020303",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "大麥",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102020303",
+            * 
+Sex: "雄",
+            * 
+Note: "帥氣的大麥就是我，我很威風凜凜吧！我可是很有個性的，但看到大家還是有有些緊張啦！",
+            * 
+Phone: "02-87913254",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/068ab98f-5ea4-4b74-826b-9048fdba2c61.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 82,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "17KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102020203",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "滷蛋",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102020203",
+            * 
+Sex: "雄",
+            * 
+Note: "您好，我是滷蛋，我很乖，不會亂吵，這樣的我，您願意給我一個機會跟您回家嗎？",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾不擬續養",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/4ee8dc44-4cfe-4666-834b-2a2b37a6ba1b.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000027755",
+            * 
+_id: 83,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102020104",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "蓉蓉",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: " 臺北市動物之家 收容編號102020104",
+            * 
+Sex: "雌",
+            * 
+Note: "大家好？我是蓉蓉，跟欣欣是室友，我們住一起都會聊天，然後我們都想要個溫暖的家唷！",
+            * 
+Phone: "02-87913254",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/46271ddd-b2dd-4300-b961-efa45b7f7801.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 84,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "18KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102020103",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "欣欣",
+            * 
+Variety: "米克斯",
+            * 
+Age: "老年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102020103",
+            * 
+Sex: "雌",
+            * 
+Note: "你好嗎？哇系欣欣，我是害羞內向容易緊張的女孩兒，我想有個溫暖的家！",
+            * 
+Phone: "02-87913254",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/c6d07dc9-9471-400f-afc1-e7bef3f5b6b9.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 85,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "17KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102013106",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "安安",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102013106",
+            * 
+Sex: "雌",
+            * 
+Note: "嗨嗨~大家好唷，我是安安，我是一個害羞內向的女生，想要認識我的人，一定要給我多一點的愛心與耐心唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/db11fe0b-b64d-4c15-93ed-c6e43c662f89.jpg",
+            * 
+HairType: "棕白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 86,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "17KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102012902",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "隊長",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雄",
+            * 
+Note: "隊長-虎斑局長跟隊長是同一胎,預估11月15日生的二隻小小貓　二隻都是男生個性活潑、親人、可摸可抱,建議二隻一起養比較有伴已施打預防針、固定點除蚤藥認養人需年滿21歲,學生需家長同意及簽立認養切結書,需能接受認養前探訪(大台北地區優先)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/d0d3a617-3d05-4320-8190-6d77ca846cdf.jpg",
+            * 
+HairType: "虎斑",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "可,貓",
+            * 
+ChipNum: "",
+            * 
+_id: 87,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "1.5KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122760",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "史坦利",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/243f9521-b0e3-4341-9019-b3db6ca7fe9c.jpg",
+            * 
+HairType: "虎斑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 115,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102012901",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "局長",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雄",
+            * 
+Note: "局長-白底虎斑局長跟隊長是同一胎,預估11月15日生的二隻小小貓　二隻都是男生個性活潑、親人、可摸可抱,建議二隻一起養比較有伴已施打預防針、固定點除蚤藥認養人需年滿21歲,學生需家長同意及簽立認養切結書,需能接受認養前探訪(大台北地區優先)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/0e6ff8ed-7a79-4cf3-8716-dee059760319.jpg",
+            * 
+HairType: "虎斑白",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "可,貓",
+            * 
+ChipNum: "",
+            * 
+_id: 88,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "1.5KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102012309",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "妍妍",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102012309",
+            * 
+Sex: "雌",
+            * 
+Note: "哈囉!我的名字叫妍妍，我是內向文靜的小女生，我好想要一個家喔!來帶我回家好嗎?",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/8dcf97d2-52e9-48e3-8cfc-b01b3dbb97bb.jpg",
+            * 
+HairType: "黑棕",
+            * 
+Build: "幼",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 89,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "2KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102012305",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "貝兒",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102012305",
+            * 
+Sex: "雌",
+            * 
+Note: "哈囉!我是小瓜，我的個性有點害羞內向，快來把我感化成開朗美少女吧!",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/fc1e0500-c169-4dcf-8893-38eaef453f1c.jpg",
+            * 
+HairType: "棕",
+            * 
+Build: "幼",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 90,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "2KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102011605",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "文文",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102011605",
+            * 
+Sex: "雄",
+            * 
+Note: "嗨嗨，我是文文，我的個性有些內向，但是我還是可以出來跟您一起互動的唷，所以有空的時候可以來看看我呢！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/e92482af-6d69-42f0-b467-f501f5bb0b1b.jpg",
+            * 
+HairType: "棕",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 91,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "3KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102011602",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "格子趣",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102011602",
+            * 
+Sex: "雄",
+            * 
+Note: "哈哈，又是我格子趣來拉，看我明亮的雙眼及帥氣的笑容，是不是電到您拉，快點來把我領養回家吧！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/706d7ca2-360b-4c6e-ae1c-a25c507b9db0.jpg",
+            * 
+HairType: "棕黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 92,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "16KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102011510",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "小仁",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102011510",
+            * 
+Sex: "雄",
+            * 
+Note: "大家好!我是小德,我是溫馴的乖小孩,喜歡我嗎?快帶我回家!",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/b155e179-5f69-4f6d-8670-a604ef3bd45e.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 93,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "3KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102011420",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "Amber",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102011420",
+            * 
+Sex: "雌",
+            * 
+Note: "哈囉！我是Anber,看我的笑容很甜美吧!我的腳曾經受過傷,但現在都好了喔!正在等來電的你帶我回家喔!",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/fa1666b1-8cb4-4c2e-af60-c0a8e3c5907d.jpg",
+            * 
+HairType: "虎斑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 94,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "17KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102011005",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "Zoe",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102011005",
+            * 
+Sex: "雌",
+            * 
+Note: "你好!我是Zoe，是個活潑可愛的女生，我正在等你帶我回家喔!",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/a71583c2-4e4c-40e3-b77d-d3cf79d4e193.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 95,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "3KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102010908",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "普克",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102010908",
+            * 
+Sex: "雄",
+            * 
+Note: "大家今天好嗎，今天天氣很好耶，要不要來動物之家跟我普克一起做做日光浴呢？我在動物之家等著您唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/e4aa0995-b8e2-4108-885a-6ab8d770dbac.jpg",
+            * 
+HairType: "棕",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000176361",
+            * 
+_id: 96,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "15KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102010717",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "鳳梨",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102010717",
+            * 
+Sex: "雌",
+            * 
+Note: "大家好阿，我是鳳梨，別看我這樣看起來好像很兇，其實我是有點害羞內向，但是我還是願意讓您摸摸，陪您一起散步的唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/508e3a27-8ab7-4c94-ac49-bb5521851cfb.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 97,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "16KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102010715",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "小佳",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102010715",
+            * 
+Sex: "雌",
+            * 
+Note: "跨呷！跨呷！我是小佳，我比較膽怯內向，多花點心思在我身上我一定會乖乖的唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/49e3e96d-4693-4f6f-ba07-866da16c5d61.jpg",
+            * 
+HairType: "棕",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 98,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "3KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102010702",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "三姑",
+            * 
+Variety: "寵物兔",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "需評估",
+            * 
+Resettlement: "台北市愛兔協會",
+            * 
+Sex: "雌",
+            * 
+Note: "2012/11/12協會志工一口氣帶回五隻棄兔，兩隻乳牛色兔子、三隻道奇兔，其中兩組(一公一母)(一公三母)被公母混合關籠遺棄，其中一隻黃道奇今早已出現啣草現象，恐怕數日後即將生育。志工初步檢查這五兔暫時沒有重大傷患，不過實際狀況需要明天給醫師做詳細的健診後才可確認，連同上週的基隆鮭魚炒飯兩兔、另一隻棄養個案愛兔之家一周內連續收進八隻棄兔！僅有二十個床位的愛兔之家，今年收容安置量又破百了(今年11/12結算共計111個案件)，超收也嚴重排擠了協會可投入生命教育以及社會宣傳的資源，期望兔友亦可發揮博愛精神，主動成為個人中途或加入協會褓母團隊，凡願意實際參與照顧棄兔的兔友（無論是個人中途或協會褓母），協會均提供完整的設備物資以及協助辦理送養會，協助完成送養任務。 【其他資訊】兔兔姓名：三姑預估歲數：1.5歲(2012/11/16)性　　別：女生相片地點：愛兔之家其他補充：2012.11.14(A)",
+            * 
+Phone: "0922560178",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/87403922-c5ee-46e4-8622-dbc116d51b20.jpg",
+            * 
+HairType: "咖啡白",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "需評估",
+            * 
+ChipNum: "",
+            * 
+_id: 99,
+            * 
+Type: "其他",
+            * 
+Email: "service@loverabbit.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102010415",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "翠西",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102010415",
+            * 
+Sex: "雌",
+            * 
+Note: "大家好~我是翠西，我是一隻非常開心快樂的小狗唷，如果您想要感染我的快樂，就快點來把我領養回家吧！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/4f89902c-413d-40e6-8868-b8bbdd861d92.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 100,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "18KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102010301",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "黑皮",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "可,太小的較不建議",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雌",
+            * 
+Note: "撐過黏鼠板、貓瘟襲擊的黑皮(HAPPY)小時候剛來協會時被黏鼠板黏到,花了好多時間才清理乾淨後來又發生得了貓瘟,差點死翹翹好在痊癒了,留下些後遺症-->後腳走路不太穩現在是頭好壯壯的狀態,個性極好,非常親人,愛玩很適合只想養一隻貓的家庭,奇兒個性活潑,親人,摸抱都不是問題註:認養人需年滿21歲,學生需家長同意,需能接受認養前探訪(大台北地區優先)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/da8fa536-9953-46dc-af58-03df78a2dac7.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 101,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "3KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122759",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "米莉",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/bfff582a-de46-43f9-bc7b-6bb40f771f64.jpg",
+            * 
+HairType: "棕白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 116,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "102010102",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "阿潑",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號102010102",
+            * 
+Sex: "雄",
+            * 
+Note: "啊哈~我是阿潑，不要看我外表好像很強悍，其實我是很害羞內向的，每次有人帶我出來散步，我都會像這樣貼在他們的身上不放喔！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/9c4ec692-eac3-48bf-ae55-9df6eb2cc060.jpg",
+            * 
+HairType: "黑黃",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 102,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "13KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122772",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "鄧肯",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/08020fb4-74d9-4d87-84ef-d9f84231709c.jpg",
+            * 
+HairType: "棕黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 103,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122771",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "小黃",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/1d30abd9-3e86-4e64-9dd8-3ae6b7eb4bf9.jpg",
+            * 
+HairType: "棕",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 104,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122770",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "小白",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/7e29acef-dd78-4d17-8067-704f7ac45b74.jpg",
+            * 
+HairType: "白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 105,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122769",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "洋洋",
+            * 
+Variety: "約克夏",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/a65dbf38-e453-48b7-9bf0-ba750585cc8b.jpg",
+            * 
+HairType: "咖啡",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 106,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122768",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "李查",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/a4a0b10c-a6cf-49f7-9bfe-ce6f07977f4b.jpg",
+            * 
+HairType: "咖啡",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 107,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122767",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "哈莉特",
+            * 
+Variety: "米克斯",
+            * 
+Age: "老年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/b99540b0-c33e-440b-aae7-bdb3d567655f.jpg",
+            * 
+HairType: "咖啡白",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 108,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122766",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "淑女",
+            * 
+Variety: "邊境牧羊犬",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/cb3277c3-122e-4ae7-a024-920ab2648e57.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 109,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122765",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "鮑比",
+            * 
+Variety: "臘腸",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/dc7ede5a-01c1-4723-97db-bb834e4b242b.jpg",
+            * 
+HairType: "棕黑",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 110,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122764",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "臭虎",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/73f34f73-a548-4b4b-9d27-e0e0b987dd33.jpg",
+            * 
+HairType: "虎斑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 111,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122763",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "Ebony",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/c0f6a7ef-223d-4424-a034-c7997d724f09.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 112,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122762",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "Lucky",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/09ced761-d465-4bc9-90b8-b9beb8268c4f.jpg",
+            * 
+HairType: "棕黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 113,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122756",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "莉雅&路克",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/1bff5623-1c69-40a8-9857-6bae62fbdcb2.jpg",
+            * 
+HairType: "白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 119,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122755",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "卡多",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/07507072-7c02-4e6f-854a-176a28a879a9.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 120,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122754",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "珍娜",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/17276f40-2eee-4715-be28-a0a03f5f036e.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 121,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122753",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "艾妃",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/6452dd24-1e2d-4efe-ab84-30b083ce0969.jpg",
+            * 
+HairType: "白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 122,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122752",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "愛可",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/7ebe0d86-46e4-40cd-a367-1cd8e867eda9.jpg",
+            * 
+HairType: "咖啡",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 123,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122751",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "史卡",
+            * 
+Variety: "米格魯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/a8fd36d3-c4d0-4b8c-88de-86cffeede9f7.jpg",
+            * 
+HairType: "咖啡白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 124,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122750",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "Sophie",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/be6a7b29-77ff-4a96-af9a-ae4f23e13182.jpg",
+            * 
+HairType: "棕黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 125,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122749",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "Oreo",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/d7208f0f-c5bd-4b2d-9e63-04e25bc11b30.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 126,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122748",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "蘇西",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/aa02ff48-33f3-4035-bdca-94549ad3e9f9.jpg",
+            * 
+HairType: "棕白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 127,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122747",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "溫戴爾",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/fcc3b785-0be5-46a0-8e58-fddd4a0df1db.jpg",
+            * 
+HairType: "虎斑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 128,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122746",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "懷弟",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/a61b7bd9-5b7b-4216-9f0f-34045377120a.jpg",
+            * 
+HairType: "白",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 129,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122745",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "多比",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/72b05210-91e9-46c0-a750-b325f052c855.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 130,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122744",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "希娃",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/76058b17-fee1-49d7-86d6-8aa970a8fa43.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 131,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122743",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "皮克",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/9467fe22-33cf-4ec7-9745-5fd7e45d5f38.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 132,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122742",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "三角架",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/686c39f0-e8d4-4e1d-86f6-944d9eda6c52.jpg",
+            * 
+HairType: "白",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 133,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122741",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "維也那",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/6fe701cf-ee8a-4b05-bdba-052f0268e0f3.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 134,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122740",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "Jaws",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/1d21a256-1431-4575-b96d-83928c323b16.jpg",
+            * 
+HairType: "棕",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 135,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122739",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "薇娃",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/4ee6965a-3ed6-42a4-85a0-1b72b6b7766d.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 136,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122738",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "查理",
+            * 
+Variety: "馬爾濟斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/01ac2282-ba8d-4837-aa3b-1e50e3376b31.jpg",
+            * 
+HairType: "白",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 137,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122737",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "瑪利亞",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/ec4c4310-e747-48d9-ae12-11390179beb7.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 138,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122736",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "羅西",
+            * 
+Variety: "博美",
+            * 
+Age: "老年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/cde7c3dc-af25-4b64-9805-78ecb8367bd5.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 139,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122735",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "熙娜",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/3ca702f0-4dd0-4961-9d09-c4a69f700b31.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 140,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122734",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "史特菲",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/d0d2b928-16e8-417b-95b1-820d7b5ae774.jpg",
+            * 
+HairType: "棕白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 141,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122733",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "尤妮",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/43d58248-6f09-43ad-8ce9-f58f1dc74ddf.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 142,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122732",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "丹妮卡",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/e5cd47f5-c172-4225-ace6-2676f6feb8ba.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 143,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122731",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "歐提斯",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/edffe87c-efee-499e-bd01-4a360d3b2dc9.jpg",
+            * 
+HairType: "花白",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 144,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122730",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "牛頓",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/0f296343-ffbe-4e8a-a304-3a5b58c69835.jpg",
+            * 
+HairType: "棕",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 145,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122729",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "納努",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/50b66238-bda2-431e-9514-d2dd7eb8f901.jpg",
+            * 
+HairType: "白",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 146,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122728",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "河流",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/68d55c83-e9dc-4493-a95b-8f06bb0151bd.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 147,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122727",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "琳希",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/b9023cec-f8fc-471f-bf7e-51765b5c2a49.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 148,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122726",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "朱諾",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/5b2847e5-e7c5-4a9f-bb65-d8092cba53ff.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 149,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122725",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "布丁",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/a8812260-9690-42d3-9c3e-9bf68905ac7c.jpg",
+            * 
+HairType: "米",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 150,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122724",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "茱蔕",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會 Animals Taiwan",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/dcd514be-7477-49c5-a939-ea6bbfd7a403.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 151,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122723",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "修一",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會 Animals Taiwan",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/279009f5-75cb-4a91-b3ba-ab8a20bfd905.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 152,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122722",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "法籃克",
+            * 
+Variety: "米克斯",
+            * 
+Age: "老年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會 Animals Taiwan",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/50765e18-9b3e-4f04-83d9-eb8ed577366e.jpg",
+            * 
+HairType: "棕",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 153,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122721",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "大黑",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會 Animals Taiwan",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/0b348b6f-e0c1-4c37-a6e8-fbeefe292a55.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 154,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org ",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122720",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "香腸",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/1d439a84-55ce-4658-bd19-bd7dfafd6006.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 155,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122719",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "喬可",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/6b1256b5-9499-4b99-bba6-3d714dc94db1.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 156,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122718",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "機會",
+            * 
+Variety: "米克斯",
+            * 
+Age: "老年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會 Animals Taiwan",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/7e7cf8ce-5b6e-468e-8bbf-e7cdf2bd9982.jpg",
+            * 
+HairType: "黑棕",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 157,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122717",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "巴帝",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會 Animals Taiwan",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/49b5c2d4-bd8f-4057-9713-4dd9aebf84a8.jpg",
+            * 
+HairType: "虎斑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 158,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122604",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "小優",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號101122604",
+            * 
+Sex: "雄",
+            * 
+Note: "我叫小優，大家好，今天天氣很好！有沒有人要帶我出去曬曬太陽阿？！～～～",
+            * 
+Phone: "02-87913254",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/c9407123-7ef1-468f-aa32-975dce4e903b.jpg",
+            * 
+HairType: "棕",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 159,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "3KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122716",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "阿弟",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會 Animals Taiwan",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/3751667b-b7ea-4ac2-982b-2e06260f5ee4.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 160,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122603",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "黑皮",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號101122603",
+            * 
+Sex: "雄",
+            * 
+Note: "看這邊，我是害羞內向的黑皮，我需要一個有耐心的主人帶我走向Happy的世界唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/74f2dd6f-7d25-4361-90ea-094e5ebaff42.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 161,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "3KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122715",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "波士頓",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會 Animals Taiwan",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/6e85ce9a-8a00-4cf5-b287-db03289d98b4.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 162,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122714",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "妮嘴",
+            * 
+Variety: "米克斯",
+            * 
+Age: "老年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會",
+            * 
+Sex: "雌",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/7d52dad6-2985-4df8-a439-8382bb160559.jpg",
+            * 
+HairType: "白",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 163,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122713",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "班迪特",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會 Animals Taiwan",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/8ea751da-eab7-4164-befe-a19dbb93b00e.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 164,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122712",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "保羅",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會 Animals Taiwan",
+            * 
+Sex: "雄",
+            * 
+Note: "",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/853d32ce-4160-49fe-8720-fd4da359320e.jpg",
+            * 
+HairType: "虎斑",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 165,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122711",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "艾迪",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "台灣動物協會 Animals Taiwan",
+            * 
+Sex: "雄",
+            * 
+Note: "愛玩的黑色中型狗，等領養",
+            * 
+Phone: "02-2833-8820",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/f7e201ac-2eee-4efa-90ab-5a3b1eb63c73.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 166,
+            * 
+Type: "犬",
+            * 
+Email: "adoption@animalstaiwan.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122710",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "黑歪歪 ",
+            * 
+Variety: "寵物兔",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "需評估",
+            * 
+Resettlement: "社團法人台北市愛兔協會",
+            * 
+Sex: "雄",
+            * 
+Note: "案件緣由：七月初，中部地區兔友通報有間民宅內的私人繁殖場倒閉，經中部地區兔友的協助下共帶出了大大小小寵物兔共32隻，每一隻幾乎都有罹患程度不一的疾病，急需醫療協助。愛兔協會接獲求助訊息後，隨即聯絡各地兔科醫院協調緊急床位，並於隔日清晨抵達台中9將這些病兔送往各醫院安排住院治療，並規劃等兔兔休養穩定後，幫助這批救援的兔兔可以儘早找到好人家。本次救援相關案件記錄可參閱以下網址：http://www.loverabbit.org/candy/news_detail.asp?NewsId=702據了解該繁殖場老闆因生病而心生眷念，隨後輾轉由中部地區兔友合力攜出救援，志工根據兔兔當下的狀態，研判這批兔兔大多為繁殖場剩餘種兔、生病兔或其他因素而遭淘汰，因此其中不乏老兔、病兔、傷殘兔等需要特殊照料的寵物。 【其他資訊】 兔兔姓名：黑歪歪預估歲數：約1歲　（救援兔僅能預估）性　　別：男生相片地點：結紮補助：11/9 結紮其他補充：巴士德桿菌歪頭症 ",
+            * 
+Phone: "0922560178",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/6dc0107e-b453-49bb-88d8-bf3cb2fa2e09.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "需評估",
+            * 
+ChipNum: "",
+            * 
+_id: 167,
+            * 
+Type: "其他",
+            * 
+Email: "service@loverabbit.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122709",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "豆干海帶 ",
+            * 
+Variety: "寵物兔",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "需評估",
+            * 
+Resettlement: "社團法人台北市愛兔協會",
+            * 
+Sex: "雌",
+            * 
+Note: "2012.07.01豆干海帶發生巴士德桿菌感染，導致原本眼球內的小白點整個爆開，整隻眼睛易常充血且眼球混濁，志工當晚緊急住院觀察，若無法有效控制則必須即早做眼球摘除術，後續部份周三將與醫師做進一步的治療。兔兔只好先面談取消並暫時停止送養。2012.07.24豆干海帶完成眼球摘除手術，暫回愛兔之家靜養。【其他資訊】 兔兔姓名：豆干海帶預估歲數：2011.05.04出生性　　別：女生相片地點：愛兔之家結紮補助：全程補助（協會救援）其他補充：5/16結紮(C) ",
+            * 
+Phone: "0922560178",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/cb8382ea-8c00-4725-b322-5ff4dd356f60.jpg",
+            * 
+HairType: "黃白",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "需評估",
+            * 
+ChipNum: "",
+            * 
+_id: 168,
+            * 
+Type: "其他",
+            * 
+Email: "service@loverabbit.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122701",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "娜塔莎",
+            * 
+Variety: "寵物兔",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "需評估",
+            * 
+Resettlement: "社團法人台北市愛兔協會",
+            * 
+Sex: "雌",
+            * 
+Note: "2012年六月底台北市與新北市動物保護處科員不約而同的致電協會因陸續有幾位愛心的個人中途因故發生收容崩潰而無法再持續照顧這些被檢回來的兔子因此全數被送到動物之家也就是這群被命名為腹愁者聯盟的可愛兔兔們由於數量較多 愛兔之家無法一次全部帶回因此協會志工與主管機關達成協議先由主管機關代照顧並由愛兔協會志工分批帶回並於健康確認後擇日安排送養------------------------不愛吃草的娜塔莎上週被發現的膿腫趕緊帶區醫院檢查發現她整排的下牙根都嚴重歪斜穿刺經過住院治療後下顎處留下了一顆好大的引流孔須要定期吃藥跟協助清瘡牙齒狀況很差應該沒也沒辦法持續吃草了 ...><...可能要靠定期磨牙來維持口腔的健康兔兔姓名：黑寡婦娜塔莎預估歲數：約一歲（2012.07.01）性　　別：女生相片地點：愛兔之家其他補充：2012/10/24(B)",
+            * 
+Phone: "0922560178",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/ececfb7c-1221-4cae-95cf-df8aa9bbb36a.jpg",
+            * 
+HairType: "白",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "需評估",
+            * 
+ChipNum: "",
+            * 
+_id: 169,
+            * 
+Type: "其他",
+            * 
+Email: "service@loverabbit.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122615",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "娜塔莎 ",
+            * 
+Variety: "寵物兔",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "no",
+            * 
+Resettlement: "社團法人台北市愛兔協會",
+            * 
+Sex: "雌",
+            * 
+Note: "2012年六月底台北市與新北市動物保護處科員不約而同的致電協會因陸續有幾位愛心的個人中途因故發生收容崩潰而無法再持續照顧這些被檢回來的兔子因此全數被送到動物之家也就是這群被命名為腹愁者聯盟的可愛兔兔們由於數量較多 愛兔之家無法一次全部帶回因此協會志工與主管機關達成協議先由主管機關代照顧並由愛兔協會志工分批帶回並於健康確認後擇日安排送養------------------------不愛吃草的娜塔莎上週被發現的膿腫趕緊帶區醫院檢查發現她整排的下牙根都嚴重歪斜穿刺經過住院治療後下顎處留下了一顆好大的引流孔須要定期吃藥跟協助清瘡牙齒狀況很差應該沒也沒辦法持續吃草了 ...><...可能要靠定期磨牙來維持口腔的健康娜塔莎過去協會無法參與但娜塔莎未來協會會儘量的照顧你 ^^【其他資訊】 兔兔姓名：黑寡婦娜塔莎預估歲數：約一歲（2012.07.01）性　　別：女生相片地點：愛兔之家其他補充：2012/10/24(B) ",
+            * 
+Phone: "0922560178",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/cadd71f0-8c25-4bec-a6fd-00e1ed66b7ed.jpg",
+            * 
+HairType: "白",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "no",
+            * 
+ChipNum: "",
+            * 
+_id: 170,
+            * 
+Type: "其他",
+            * 
+Email: "service@loverabbit.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122611",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "龜仙人",
+            * 
+Variety: "寵物兔",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "需評估",
+            * 
+Resettlement: "社團法人台北市愛兔協會",
+            * 
+Sex: "雄",
+            * 
+Note: "案件簡述（通報書）在龜山工寮附近父親發現小白兔被遺棄,於是把小白兔帶回家..... 【其他資訊】 兔兔姓名：龜仙人預估歲數：六個月（2012/02/22）性　　別：男生相片地點：愛兔之家其　　他：5/10結紮(D) ",
+            * 
+Phone: "0922560178",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/652e0939-9a3f-4df6-bb27-099c92dc2416.jpg",
+            * 
+HairType: "白",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "需評估",
+            * 
+ChipNum: "",
+            * 
+_id: 171,
+            * 
+Type: "其他",
+            * 
+Email: "service@loverabbit.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122605",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "保安",
+            * 
+Variety: "寵物兔",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "no",
+            * 
+Resettlement: "社團法人台北市愛兔協會",
+            * 
+Sex: "雄",
+            * 
+Note: "兔兔姓名：保安預估歲數：半歲（2012/04/14）性　　別：男生相片地點：愛兔之家結紮補助：2012/5/23結紮(c)這對難兄難弟被遺棄在永康青年路上，因被狗追逐而被民眾發現，經過緊急救援與短暫照顧後轉進愛兔之家，兩隻兔兔都有不可逆的傷勢，其中永康(黑)的右後腳呈現無法復原與踏地的長短腳狀態，而保安(白)除了耳朵缺一腳之外已呈現下半身癱瘓，未來需要面對漫長的護理照顧。癱瘓兔「保安」的健診與復健評估，上周緊急送來愛兔之機的兩隻受傷兔永康與保安，今天由協會志工帶去做細部的檢查以及設定復原計畫，永康除了大腿骨的斷腿之外較無大礙，而保安已經確定脊髓斷裂外加多處肋骨骨折以及細微處小骨折（醫師研判應該是重摔），應該會終生癱瘓了，且不可能向永康一樣可以回覆到活蹦亂跳的樣子，除了要讓保安居住在較柔軟的環境以防褥瘡外，還要多多幫保安做肌肉運動，看看在碎骨自然黏合後，能不能多少回復一點腿力。",
+            * 
+Phone: "0922560178",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/9489b650-0ac2-4bc7-81f2-af8d984ce5d8.jpg",
+            * 
+HairType: "咖啡白",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "no",
+            * 
+ChipNum: "",
+            * 
+_id: 172,
+            * 
+Type: "其他",
+            * 
+Email: "service@loverabbit.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122604",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "保安 ",
+            * 
+Variety: "寵物兔",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "",
+            * 
+Sex: "雄",
+            * 
+Note: "兔兔姓名：保安預估歲數：半歲（2012/04/14）性　　別：男生相片地點：愛兔之家結紮補助：2012/5/23結紮(c)---這對難兄難弟被遺棄在永康青年路上，因被狗追逐而被民眾發現，經過緊急救援與短暫照顧後轉進愛兔之家，兩隻兔兔都有不可逆的傷勢，其中永康(黑)的右後腳呈現無法復原與踏地的長短腳狀態，而保安(白)除了耳朵缺一腳之外已呈現下半身癱瘓，未來需要面對漫長的護理照顧。癱瘓兔「保安」的健診與復健評估，上周緊急送來愛兔之機的兩隻受傷兔永康與保安，今天由協會志工帶去做細部的檢查以及設定復原計畫，永康除了大腿骨的斷腿之外較無大礙，而保安已經確定脊髓斷裂外加多處肋骨骨折以及細微處小骨折（醫師研判應該是重摔），應該會終生癱瘓了，且不可能向永康一樣可以回覆到活蹦亂跳的樣子，除了要讓保安居住在較柔軟的環境以防褥瘡外，還要多多幫保安做肌肉運動，看看在碎骨自然黏合後，能不能多少回復一點腿力。",
+            * 
+Phone: "",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/08755483-3f11-4cc3-9a68-553348493240.jpg",
+            * 
+HairType: "咖啡白",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 173,
+            * 
+Type: "其他",
+            * 
+Email: "",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122603",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "豆干海帶 ",
+            * 
+Variety: "寵物兔",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "需評估",
+            * 
+Resettlement: "社團法人台北市愛兔協會",
+            * 
+Sex: "雌",
+            * 
+Note: "兔兔姓名：豆干海帶預估歲數：2011.05.04出生性　　別：女生相片地點：愛兔之家結紮補助：全程補助（協會救援）其他補充：5/16結紮(C)",
+            * 
+Phone: "0922560178",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/4e77ad8b-ff7e-415c-a2b2-8833849003e2.jpg",
+            * 
+HairType: "黃白",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "需評估",
+            * 
+ChipNum: "",
+            * 
+_id: 174,
+            * 
+Type: "其他",
+            * 
+Email: "service@loverabbit.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122602",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "黑歪歪 ",
+            * 
+Variety: "寵物兔",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "",
+            * 
+Sex: "雄",
+            * 
+Note: "兔兔姓名：黑歪歪預估歲數：約3歲　（救援兔僅能預估）性　　別：男生結紮補助：11/9 結紮其他補充：巴士德桿菌歪頭症案件緣由：七月初，中部地區兔友通報有間民宅內的私人繁殖場倒閉，經中部地區兔友的協助下共帶出了大大小小寵物兔共32隻，每一隻幾乎都有罹患程度不一的疾病，急需醫療協助。愛兔協會接獲求助訊息後，隨即聯絡各地兔科醫院協調緊急床位，並於隔日清晨抵達台中9將這些病兔送往各醫院安排住院治療，並規劃等兔兔休養穩定後，幫助這批救援的兔兔可以儘早找到好人家。本次救援相關案件記錄可參閱以下網址：http://www.loverabbit.org/candy/news_detail.asp?NewsId=702據了解該繁殖場老闆因生病而心生眷念，隨後輾轉由中部地區兔友合力攜出救援，志工根據兔兔當下的狀態，研判這批兔兔大多為繁殖場剩餘種兔、生病兔或其他因素而遭淘汰，因此其中不乏老兔、病兔、傷殘兔等需要特殊照料的寵物。 ",
+            * 
+Phone: "0922560178",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/47181aea-9298-4a7b-8c10-383995b39594.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 175,
+            * 
+Type: "其他",
+            * 
+Email: "service@loverabbit.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122601",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "姑婆 ",
+            * 
+Variety: "寵物兔",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "需評估",
+            * 
+Resettlement: "社團法人台北市愛兔協會",
+            * 
+Sex: "雌",
+            * 
+Note: "兔兔姓名：姑婆預估歲數：2.6歲（2012.10.16）性　　別：女生相片地點：愛兔之家其他補充：已結紮(J)------------------------[飼主出國無法持續飼養 姑婆]深入健診後有膀胱疝氣，屬於少見的病徵目前已經開刀後復原但領養人需注意排尿狀況",
+            * 
+Phone: "0922560178",
+            * 
+Reason: "民眾不擬續養",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/f3dff250-0981-4f2d-a1de-465ef014779b.jpg",
+            * 
+HairType: "黃白",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "需評估",
+            * 
+ChipNum: "",
+            * 
+_id: 176,
+            * 
+Type: "其他",
+            * 
+Email: "service@loverabbit.org",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122504",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "ARRY",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可,太小的較不建議",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雄",
+            * 
+Note: "姓名:ARRY(煙燻色乳牛)性別:男生年紀:預估100年4月生(101年6月報到預估2個月大)介紹:體格健壯,,從小到大沒什麼太大的疾病,叫聲超可愛的,是"呀呀呀"不是喵喵叫、穿著一身煙燻色黑白禮服,體重約有5-6KG,愛玩,但個性害羞,會到定點討摸摸,但平常不會太主動撒嬌(比較內向害羞)預估適應期1-2個月,熟了可摸可抱較不適合新手,適合已養過貓的人,推薦給喜歡貓獨立但偶爾會來撒嬌的人已絕育、已施打預防針、固定除蚤認養人需年滿21歲,學生需家長同意,需能接受認養前探訪(大台北地區優先)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/fa9ccb6b-3cb9-414d-92a5-790dfb221bba.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 177,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "5-6KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122503",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "ASSA",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可,太小的較不建議",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雄",
+            * 
+Note: "姓名:ASSA(白多)性別:男生年紀:預估100年4月生(101年6月報到預估2個月大)介紹:體格健壯,從小到大沒什麼太大的疾病,有著像兔子一球的尾巴(是捲的),體重約有5-6KG,是個肌肉男,愛玩,但個性害羞,會到定點討摸摸,但平常不會太主動撒嬌(比較內向害羞),預估適應期1-2個月,熟了可摸但不太給抱較不適合新手,適合已養過貓的人,推薦給喜歡貓獨立但偶爾會來撒嬌的人已絕育、已施打預防針、固定除蚤認養人需年滿21歲,學生需家長同意,需能接受認養前探訪(大台北地區優先)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/72924b73-b6bc-444d-95bc-fc1a45d89502.jpg",
+            * 
+HairType: "黃白",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 178,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "5-6KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101120605",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "小志",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號101120605",
+            * 
+Sex: "雄",
+            * 
+Note: "我是小志，我是一隻害羞內向的狗狗，如果您想要認識我的話，一定要給我多一點的時間跟耐心唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/04dcf137-7155-4d67-babd-864995b11154.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 186,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122502",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "小穩",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可,國小三年級以上較OK",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雌",
+            * 
+Note: "姓名:混阿比的小穩年紀:預估2007年生的(2008年8月報到已1歲)個性:因為是混阿比西尼亞,有著阿比的外貌跟什麼事都要湊一腳的個性,非常喜歡人,很愛湊熱鬧的個性,走到那跟到那,非常適合喜歡貓陪著做事&生活的人,也因為這種個性,比較需要能較長時間給貓陪的人跟喜歡小貓個性的認養人,活潑、愛玩、像小孩子的個性,隨便一個逗貓棒或玩具就可以讓牠玩到瘋狂,不怕生,不怕貓(憨膽),家中有過小或年紀較長及行動不便者不適合體格:從來時就眼睛有一隻霧霧,脊椎有點側彎,因為從小到成年都在籠子裡長大,導致牠走路都是用轉圈圈的方式在走,剛來時連跳台都不會跳,睡覺只會睡在砂盆裡,目前都會正確使用貓砂盆,也會用跳台了,已絕育需年滿21歲,學生需家長同意,需能接受認養前探訪(大台北優先)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/6b1d24cb-135b-4b93-aa20-6f6b5d0d9d88.jpg",
+            * 
+HairType: "咖啡",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可,貓",
+            * 
+ChipNum: "",
+            * 
+_id: 179,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "4KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122501",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "極品麻豆",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "可,太小的較不建議",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雄",
+            * 
+Note: "個性無敵好,可以用極品稱呼的<麻豆>從動保處用麻豆文旦箱子裝回來的乳牛小貓(男生)一隻所以就叫<麻豆>啦預估101年8月初或7月底生的小貓個性無敵好,非常信任人而且從小就是隻愛乾淨的貓都不會把自己的房間弄亂,義工都超愛牠的出來玩時又很活潑是隻動靜皆宜的貓咪適合新手認養已施打三合一疫苗及固定點除蚤藥需年滿21歲,學生需家長同意,需能接受認養前探訪(大台北地區優先)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/c830519e-34bb-4869-870f-e82994b16fed.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可,貓",
+            * 
+ChipNum: "",
+            * 
+_id: 180,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "2.5KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122108",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "潔西",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號101122108",
+            * 
+Sex: "雌",
+            * 
+Note: "嗨，我是潔西，雖然我有些年紀了，但是我很乖也很聰明唷，您叫我坐下跟握手我都聽得懂唷，可以帶我一起回家嗎？",
+            * 
+Phone: "02-8791-3062",
+            * 
+Reason: "民眾不擬續養",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/eedcd35a-a825-4ae5-a3f5-55c7bd1bba0f.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "141134661A",
+            * 
+_id: 181,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: ""
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101122101",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "魯夫",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "可,太小的較不建議",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雄",
+            * 
+Note: "魯夫（Luffy）、佛朗基（Franky）、布魯克（Brook）為同胎的橘子三兄弟，預估101年6月生，因為跑到人家公司裡去玩才會被撈到。魯夫是橘白混色，頭上有塊橘色花紋就像戴了頂草帽，個性上有點小害羞，在新環境裡和人比較慢熟，不過跟同年齡小貓相處就看得出來也是個活潑好動的孩子認養人需要能耐心地陪伴等他適應。新手認養可、家中有過小的小孩或年紀較長的長輩較不適合。認養人需年滿21歲、學生需家長同意，需能接受認養前探訪(大台北地區優先)預防針已施打、固定點除蚤藥、已絕育",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/9ea1f60f-0280-47b0-86c6-17703a5b600f.jpg",
+            * 
+HairType: "黃白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可,貓",
+            * 
+ChipNum: "",
+            * 
+_id: 182,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "3KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101121411",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "辣妹",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號101121411",
+            * 
+Sex: "雌",
+            * 
+Note: "下午好！我是辣妹 辣妹是我，雖然我叫辣妹，但我是個害羞內向的女生，要對我多點耐心唷！:D",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/3f80bcf4-2f05-407c-8d81-720bfa938072.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 183,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "17KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101121214",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "阿普",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號101121214",
+            * 
+Sex: "雄",
+            * 
+Note: "你好!我是阿普,我可是頭好壯壯的帥哥!讓我們一起去運動吧!!",
+            * 
+Phone: "02-87913602",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/d5018343-4730-424e-845f-e84ea542d7f5.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000176365",
+            * 
+_id: 184,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "16KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101121114",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "東東",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "台北巿動物之家 收容編號101121114",
+            * 
+Sex: "雌",
+            * 
+Note: "哈囉，大家好我是東東，雖然我有點害羞內向，但是我還是很愛撒嬌的唷，請您有空的時候多來看看我，如果覺得我不錯的話也可以把我領養回家唷。",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾拾獲",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/db3f289f-7146-4e34-b420-ababd9f91484.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000095900",
+            * 
+_id: 185,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "4KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101120507",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "咻弟",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號101120507",
+            * 
+Sex: "雄",
+            * 
+Note: "嗨嗨，我是咻弟，大家今天有沒有要出來走走呢，您可以考慮來動物之家找我一起玩唷，我在動物之家等您來！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/b358f0a9-dd70-4979-bdb5-03cebe3fd8eb.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 187,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "5KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101120502",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "芽芽",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號101120502",
+            * 
+Sex: "雌",
+            * 
+Note: "嗨嗨，我芽芽又來囉，我是個熱情的女孩唷，我喜歡跟大家一起玩，歡迎您來動物之家找我一起玩唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/9b33c23e-c20e-4826-9929-065824e3cb95.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 188,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "5KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101120412",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "小小",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號101120412",
+            * 
+Sex: "雄",
+            * 
+Note: "啊哈~大家好，我是小小，因為我膽子很小個性又害羞，所以大家就給我取名叫小小，如果您對我有興趣的話，歡迎您來動物之家看看我唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/c54a08ed-d26e-457c-90b5-99a741c08af1.jpg",
+            * 
+HairType: "黑棕",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 189,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "6KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101113001",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "蹦蹦",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號101113001",
+            * 
+Sex: "雄",
+            * 
+Note: "哈哈，又是我蹦蹦出場囉，我可是一隻很堅強的狗狗唷，剛來的時候因為車禍所以連站都站不起來，我現在已經可以蹦蹦跳跳的了唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/f17a6ad1-ea62-428a-a6b4-085a4b957d1d.jpg",
+            * 
+HairType: "黑虎斑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900138000176297",
+            * 
+_id: 190,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "10KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101112507",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "嘿五",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號101112507",
+            * 
+Sex: "雄",
+            * 
+Note: "我叫嘿五，嘿嘿系例的第五位，我們比較怕生一點...看到我們要溫柔一點喔",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/69a4a3e4-6730-420e-bb16-88721572396b.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "幼",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 191,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "1KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101112503",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "嘿六",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號101112503",
+            * 
+Sex: "雄",
+            * 
+Note: "我叫嘿六，嘿嘿系例的第六位，我們比較怕生一點...看到我們要溫柔一點喔",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/6439f267-2bfb-4244-86e1-7be420e9f5f2.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "幼",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 192,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "2KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101112309",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "恩恩",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號101112309",
+            * 
+Sex: "雄",
+            * 
+Note: "安呀，大家好嗎？陽光小帥哥恩恩來拉，明天就是星期六囉，要不要考慮來動物之家陪我玩呀，我會跟您握握手唷！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/2dfa67d2-cc5d-485e-8fbf-3e26b7ce405b.jpg",
+            * 
+HairType: "棕",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 193,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "4KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101110502",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "奇兒",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雄",
+            * 
+Note: "撐過黏鼠板、貓瘟襲擊的奇兒小時候剛來協會時被黏鼠板黏到,花了好多時間才清理乾淨後來又發生得了貓瘟,差點死翹翹好在痊癒了,沒留下什麼後遺症現在是頭好壯壯的狀態很適合只想養一隻貓的家庭,奇兒個性活潑,親人,摸抱都不是問題註:認養人需年滿21歲,學生需家長同意,需能接受認養前探訪(大台北地區優先)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/8ef029ea-d4c2-4a2d-a164-ee277d45f1f7.jpg",
+            * 
+HairType: "虎斑白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 194,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "3KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101110411",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "小麥",
+            * 
+Variety: "米克斯",
+            * 
+Age: "幼齡",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號101110411",
+            * 
+Sex: "雌",
+            * 
+Note: "我叫小麥，我是因為車禍而送到動物之家的，現在我的傷都好了喔，不過我比較害羞內向啦",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/fb8096c9-c1ed-4857-b7a8-7687aa88785a.jpg",
+            * 
+HairType: "棕",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 195,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "2KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101110303",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "小虎",
+            * 
+Variety: "米克斯",
+            * 
+Age: "老年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號101110303",
+            * 
+Sex: "雄",
+            * 
+Note: "大家好阿，我是小虎，今天天氣這麼好，是個領養狗狗的好日子唷，大家快來動物之家領養我吧！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/c5fdb997-f8db-49d0-8020-9f296fa22f19.jpg",
+            * 
+HairType: "虎斑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 196,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "18KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101101001",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "緣緣",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號101101001",
+            * 
+Sex: "雌",
+            * 
+Note: "嗨嗨~又輪到我緣緣上場囉，我在等待一個疼愛我的主人來帶我回家，您願意給我這個機會嗎？",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "民眾拾獲",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/a7048d64-6eeb-47c5-a404-071d186356a7.jpg",
+            * 
+HairType: "黑虎斑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 197,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "15KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101100134",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "海帶",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市動物之家 收容編號101100134",
+            * 
+Sex: "雌",
+            * 
+Note: "您在看我嗎，您可以再更靠近一些唷，我是海帶，是一隻愛撒嬌的害羞小狗喔，喜歡被狗狗撒嬌的人快來領養我吧！",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/74a4c367-eb09-42d0-a2e5-eb0020b1bd86.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 198,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "17KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101100203",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "柔柔",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "小學以下不建議",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雌",
+            * 
+Note: "貓名:女王等級的柔柔年紀:2007年來協會時已經是成貓了個性:女王個性,活潑、個性某種程度上的親人(比較隨自己心意)、撒嬌時很撒嬌,不想被摸時會用抓或咬警告(力道會控制),可以從後面嬰兒抱&剪指甲,討厭人從正面來,適合只養一隻貓的人,可以接受貓有獨性個性者尤佳,不太適合家中有太小或太年長的家庭其它:固定都有點除蚤藥(寵愛)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/0964f982-df2d-45b8-a8e1-a58d43733c2a.jpg",
+            * 
+HairType: "三花",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "不可",
+            * 
+ChipNum: "",
+            * 
+_id: 199,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "4-5KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101090504",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "阿胖",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雌",
+            * 
+Note: "阿胖愛玩,但是不會粘人,可以摸可以抱,但是抱了會大叫五短身材的阿胖超可愛新手認養可,但喜歡貓粘人的人較不適合已絕育,已打預防針,除蚤認養人需年滿21歲,學生需家長同意,需能接受認養前探訪",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/176f1b3b-5964-4f3f-8d45-8ddc67685dc1.jpg",
+            * 
+HairType: "黃白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 200,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "3.8KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101082710",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "蘭豆豆",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "小學以下不建議",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雄",
+            * 
+Note: "有兔子尾巴的蘭豆豆豆豆有著線條帥氣的臉龐，一雙淡琥珀色的眼睛充滿了靈性，但身後卻是配上短短圓圓的兔子尾巴十分逗趣，個性親人，人一靠近就會東蹭西蹭想引起注意，但也可以很獨立地自己玩得不亦樂乎，對任何事物都很好奇，常常在送養中心到處探索！能接受很皮,活動力強的貓的人為主,家中有老人及過小的小孩較不適合,新手認養可學生需家長同意,需能接受認養前探訪",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/4a3a7418-75dd-4991-893b-b22d4a1be796.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 201,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "5KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101082708",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "蘭黑糖",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "可",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雌",
+            * 
+Note: "甜死人不償命的軟QQ[黑糖]十分愛撒嬌的小女生，一抱入懷裡（你沒主動抱她也會自己跳進來）就開始踩踩、吸人的衣服，她是個還保留著幼幼貓稚氣的女娃兒，但也是個愛活蹦亂跳的小淘氣，黏人又調皮的個性，適合喜歡與貓咪膩在一起也喜歡陪貓咪玩的人來疼愛～特別適合就愛貓咪黏TT的人,新手認養可,家中有老人小孩亦可學生需家長同意,需能接受認養前探訪(大台北地區優先)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/cdf951f1-3ac0-4f1e-b416-cd9cdd930475.jpg",
+            * 
+HairType: "黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可",
+            * 
+ChipNum: "",
+            * 
+_id: 202,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "4KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101082705",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "建國",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雄",
+            * 
+Note: "建國-超愛撒嬌的傑尼斯系花美小公喵從建國高架橋被人救起的建國,很愛撒嬌、看到人就叫個不停外加翻肚討摸摸的建國，是白底虎斑的美形少年，叫聲很女孩子氣，不過玩耍起來就是個不折不扣的小男孩，正值活潑好動的年紀，非常喜歡跟人或貓一起玩，且正在換牙愛咬咬，需要能耐心對待並陪玩的認養人。怕吵、怕貓太皮的家庭較不適合學生需家長同意,需能接受認養前探訪",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/e7af5c69-8b23-44f9-9209-e979810b7afb.jpg",
+            * 
+HairType: "虎斑白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 203,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "2.8KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101072606",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "蘭Ａ",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雌",
+            * 
+Note: "溫和親人的傻大姐-蘭A在一窩小貓中是最早送出去的白底虎斑貓，前些日子因為原認養人私人因素退回協會，個性很溫和親人，目前正在適應新環境中會稍稍緊張，但是完全不會兇，只會用眼巴巴地望著你，如果你喜歡眼睛圓圓的、臉圓圓的、屁股也圓圓的乖巧貓咪，歡迎來看看蘭A。新手認養人可註:認養人需年滿21歲,學生需家長同意,需能接受認養前探訪(相親)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/3713fd33-db97-4cbf-b49a-be2c4eb8c9f7.jpg",
+            * 
+HairType: "虎斑白",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "可(貓)",
+            * 
+ChipNum: "",
+            * 
+_id: 204,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "4-5KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101072604",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "Wendy",
+            * 
+Variety: "米克斯",
+            * 
+Age: "成年",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雄",
+            * 
+Note: "手長腳長且長相俊秀的貓界男模豆-WENDY雖然身材比起同年齡貓咪都還要大隻，但個性卻很膽小害羞，容易因為人的大動作而緊張害怕，但自己一個人或是跟其他貓咪一起玩的時候就很大剌剌，從小奶貓就來協會的Wendy現在是帥氣青年，正值青春好動，適合喜歡貓咪個性獨立，家裡有足夠空間讓他玩耍的認養人喔！預估生日:2011年2月底已絕育、已施打預防針、已除蚤註:認養人需年滿21歲,學生需家長同意,需能接受認養前探訪(相親)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/4a10b64e-746c-424f-8c7a-8b2ed4f87ed3.jpg",
+            * 
+HairType: "虎斑白",
+            * 
+Build: "大",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "",
+            * 
+_id: 205,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "5KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101072602",
+            * 
+IsSterilization: "未絕育",
+            * 
+Name: "蘭心湄",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "高中以下不建議",
+            * 
+Resettlement: "臺北市流浪貓保護協會",
+            * 
+Sex: "雌",
+            * 
+Note: "超喜歡表演翻肚肚給人看的乳牛女孩-蘭心湄一開始是很緊張的怕怕貓，但經過一段時間的摸摸＆抱抱訓練後，現在已經不會那麼警戒了，對所有移動的物品都想伸手撈來玩，轉換環境較易緊張，認養人須要有耐心等她適應，也需要能適時與她互動增進感情。適合已有養貓經驗,能處理緊張貓狀況的認養人註:認養人需年滿21歲,學生需家長同意,需能接受認養前探訪(相親)",
+            * 
+Phone: "0227261079",
+            * 
+Reason: "",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/ac7a6af1-fd06-4ce9-8cab-ad335177d519.jpg",
+            * 
+HairType: "黑白",
+            * 
+Build: "小",
+            * 
+AnimalAnlong: "可(貓)",
+            * 
+ChipNum: "",
+            * 
+_id: 206,
+            * 
+Type: "貓",
+            * 
+Email: "jingyi@so-net.net.tw",
+            * 
+Bodyweight: "3KG"
+},
+         * 
+
+-
+{
+            * 
+AcceptNum: "101041102",
+            * 
+IsSterilization: "已絕育",
+            * 
+Name: "優尼Uni",
+            * 
+Variety: "米克斯",
+            * 
+Age: "年輕",
+            * 
+ChildreAnlong: "",
+            * 
+Resettlement: "台北市動物之家 收容編號101041102",
+            * 
+Sex: "雄",
+            * 
+Note: "你好！！我叫優尼，我活潑好動也很溫馴、黏人唷!! ^^",
+            * 
+Phone: "02-87913062",
+            * 
+Reason: "動物救援",
+            * 
+ImageName: "http://163.29.39.183/uploads/images/medium/95ff0da5-1435-444e-90ee-60d320545dc4.jpg",
+            * 
+HairType: "棕黑",
+            * 
+Build: "中",
+            * 
+AnimalAnlong: "",
+            * 
+ChipNum: "900128000641278",
+            * 
+_id: 207,
+            * 
+Type: "犬",
+            * 
+Email: "tcapoa8@mail.taipei.gov.tw",
+            * 
+Bodyweight: "18KG"
+}
+],
+      * 
+limit: 500,
+      * 
+_links: 
+-
+{
+         * 
+start: "/api/action/datastore_search?limit=500&resource_id=c57f54e2-8ac3-4d30-bce0-637a8968796e",
+         * 
+next: "/api/action/datastore_search?offset=500&limit=500&resource_id=c57f54e2-8ac3-4d30-bce0-637a8968796e"
+},
+      * 
+total: 207
+}
+
+}
+
++-View source
+

@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">PetLove</string>
+    <string name="app_name">貓狗日記</string>
     <string name="action_settings">設定</string>
 	<string name="action_refresh">重新整理</string>
+	<string name="action_load_assets_records">載入檔案</string>
+
+	<string name="dropdown_selection_all">全部</string>
+	<string name="dropdown_selection_dog">狗狗</string>
+	<string name="dropdown_selection_cat">貓咪</string>
 
 </resources>

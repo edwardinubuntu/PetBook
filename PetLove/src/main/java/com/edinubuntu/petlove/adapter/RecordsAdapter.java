@@ -1,7 +1,6 @@
 package com.edinubuntu.petlove.adapter;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,7 +46,7 @@ public class RecordsAdapter extends ArrayAdapter<Record> {
             contentView = inflater.inflate(R.layout.pet_grid_cell, null);
         }
 
-        Log.d(PetLove.TAG, "get view get width:" + contentView.getWidth() + ", height:" + contentView.getHeight());
+//        Log.d(PetLove.TAG, "get view get width:" + contentView.getWidth() + ", height:" + contentView.getHeight());
 
         Record record = this.getItem(position);
 
@@ -56,7 +55,7 @@ public class RecordsAdapter extends ArrayAdapter<Record> {
         int height;
         if (contentView.getWidth() == 0) {
             height = getColumnPerPage();
-            Log.d(PetLove.TAG, "Height: " + height);
+//            Log.d(PetLove.TAG, "Height: " + height);
         } else {
             height = (int)(contentView.getWidth() * PetLove.IMAGE_VIEW_HEIGHT_SCALE_RATE);
         }
