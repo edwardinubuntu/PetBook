@@ -15,19 +15,14 @@ before_install:
   - mkdir -p $ANDROID_HOME/build-tools/
   - mv $ANDROID_HOME/android-4.3 $ANDROID_HOME/build-tools/18.0.1
 
-
   # Install required Android components.
   - echo y | android update sdk --filter platform-tools --no-ui --force > /dev/null
   - echo y | android update sdk --filter tools --no-ui --force > /dev/null
   - echo y | android update sdk --filter build-tools-17.0.0 --no-ui --force > /dev/null
 
-  - echo y | android update sdk --filter android-16 --no-ui --force > /dev/null
-  - echo y | android update sdk --filter android-17 --no-ui --force > /dev/null
   - echo y | android update sdk --filter android-18 --no-ui --force > /dev/null
   - echo y | android update sdk --filter extra-android-support --no-ui --force > /dev/null
   - echo y | android update sdk --filter extra-android-m2repository --no-ui --force > /dev/null
 
-notifications:
-  hipchat: 677a00c745ac4ea1f5e1c8cf470a97@Mothership
 install: ./gradlew assemble --stacktrace
 script: ./gradlew check --stacktrace --info
