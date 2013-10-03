@@ -36,19 +36,19 @@ public class DrawerAction {
         int imageResource = 0;
         if (getActionType() == ActionType.HOME) {
             imageResource = R.drawable.ic_action_tiles_large;
-        } else if (getActionType() == ActionType.USER_PROFILE) {
+        } else if (getActionType() == ActionType.PET_EVENTS) {
             imageResource = R.drawable.ic_action_user;
-        } else if (getActionType() == ActionType.PET_ALL_RECORDS) {
+        } else if (getActionType() == ActionType.PET_MARKETS) {
             imageResource = R.drawable.ic_action_search;
-        } else if (getActionType() == ActionType.FRIENDS) {
+        } else if (getActionType() == ActionType.FRIENDS_PET) {
             imageResource = R.drawable.ic_action_star_10;
-        } else if (getActionType() == ActionType.TODO_LIST) {
+        } else if (getActionType() == ActionType.BADGES) {
             imageResource = R.drawable.ic_action_bookmark;
         }
         return imageResource;
     }
 
     public enum ActionType {
-        HOME, USER_PROFILE, PET_ALL_RECORDS, FRIENDS, TODO_LIST
+        HOME, PET_EVENTS, PET_MARKETS, FRIENDS_PET, BADGES
     }
 }

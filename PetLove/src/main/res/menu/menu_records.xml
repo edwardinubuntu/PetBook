@@ -8,8 +8,13 @@
 	      android:showAsAction="ifRoom"
 	      android:title="@string/action_refresh" />
 
+	<item android:id="@+id/action_load_https_records"
+	      android:title="@string/action_load_https_records"
+	      android:orderInCategory="200"
+	      android:showAsAction="never" />
+
 	<item android:id="@+id/action_load_assets_records"
 	      android:title="@string/action_load_assets_records"
-	      android:orderInCategory="100"
+	      android:orderInCategory="201"
 	      android:showAsAction="never" />
 </menu>

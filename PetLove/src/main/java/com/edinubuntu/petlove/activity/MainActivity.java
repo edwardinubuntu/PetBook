@@ -10,16 +10,20 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.edinubuntu.petlove.R;
 import com.edinubuntu.petlove.adapter.DrawerActionsAdapter;
+import com.edinubuntu.petlove.fragment.PetHomeFragment;
 import com.edinubuntu.petlove.fragment.RecordsFragment;
 import com.edinubuntu.petlove.object.DrawerAction;
 
 import java.util.ArrayList;
+
+import static com.edinubuntu.petlove.object.DrawerAction.ActionType.*;
 
 public class MainActivity extends SherlockFragmentActivity
 {
@@ -59,6 +63,11 @@ public class MainActivity extends SherlockFragmentActivity
 
         drawerActionList = new ArrayList<DrawerAction>();
         drawerListViewAdapter = new DrawerActionsAdapter(this, drawerActionList);
+
+        View settingView = getLayoutInflater().inflate(R.layout.drawer_list_item, null);
+        TextView textView = (TextView)settingView.findViewById(R.id.drawer_list_item_text_view);
+        textView.setText("Settings");
+        drawerListView.addFooterView(settingView);
 
         drawerListView.setAdapter(drawerListViewAdapter);
         drawerListView.setOnItemClickListener(new ListView.OnItemClickListener() {
@@ -132,8 +141,19 @@ public class MainActivity extends SherlockFragmentActivity
 
         // If user profile them open user
         DrawerAction drawerAction = drawerActionList.get(position);
-        if (drawerAction.getActionType() == DrawerAction.ActionType.PET_ALL_RECORDS) {
-            Fragment fragment = new RecordsFragment();
+
+        Fragment fragment = null;
+        switch (drawerAction.getActionType()) {
+            case HOME: {
+                fragment = new PetHomeFragment();
+                break;
+            }
+            case PET_MARKETS: {
+                fragment = new RecordsFragment();
+                break;
+            }
+        }
+        if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
             drawerListView.setItemChecked(position, true);
@@ -175,11 +195,11 @@ public class MainActivity extends SherlockFragmentActivity
 
     private void refreshDrawerActions() {
         drawerActionList.clear();
-        drawerActionList.add(new DrawerAction(getString(R.string.drawer_home), DrawerAction.ActionType.HOME));
-        drawerActionList.add(new DrawerAction(getString(R.string.drawer_profile), DrawerAction.ActionType.USER_PROFILE));
-        drawerActionList.add(new DrawerAction(getString(R.string.drawer_todo_list), DrawerAction.ActionType.TODO_LIST));
-        drawerActionList.add(new DrawerAction(getString(R.string.drawer_friends), DrawerAction.ActionType.FRIENDS));
-        drawerActionList.add(new DrawerAction(getString(R.string.drawer_records), DrawerAction.ActionType.PET_ALL_RECORDS));
+        drawerActionList.add(new DrawerAction(getString(R.string.drawer_home), HOME));
+        drawerActionList.add(new DrawerAction(getString(R.string.drawer_pet_events), PET_EVENTS));
+        drawerActionList.add(new DrawerAction(getString(R.string.drawer_badges), BADGES));
+        drawerActionList.add(new DrawerAction(getString(R.string.drawer_friends), FRIENDS_PET));
+        drawerActionList.add(new DrawerAction(getString(R.string.drawer_records), PET_MARKETS));
 
         drawerListViewAdapter.setObjectList(drawerActionList);
         drawerListViewAdapter.notifyDataSetChanged();

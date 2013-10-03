@@ -100,9 +100,9 @@ public class RecordsFragment extends SherlockFragment implements ActiveObjectsLo
                         break;
 
                     case DROP_ITEM_SELECTION_CAT:
-                        java.util.List<Record> catList = new Select().from(Record.class).where("type='"+
+                        java.util.List<Record> catList = new Select().from(Record.class).where("type='" +
                                 getString(R.string.record_type_cat)
-                                +"'").execute();
+                                + "'").execute();
                         refreshObjectsToViews(catList);
                         break;
                 }
@@ -127,19 +127,17 @@ public class RecordsFragment extends SherlockFragment implements ActiveObjectsLo
 
         petsGridView.setAdapter(recordsAdapter);
 
-        java.util.List<Record> recordList = selectObjects(false);
-        refreshObjectsToViews(recordList);
-        loadObjects(adaptPetsModel, false);
-
         return rootView;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
     }
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.menu_records, menu);
-
-
-
         this.menu = menu;
         super.onCreateOptionsMenu(menu, inflater);
     }
@@ -148,6 +146,9 @@ public class RecordsFragment extends SherlockFragment implements ActiveObjectsLo
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_refresh:
+                loadObjects(adaptPetsModel, false);
+                break;
+            case R.id.action_load_https_records:
                 loadObjects(adaptPetsModel, false);
                 break;
             case R.id.action_load_assets_records:
