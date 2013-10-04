@@ -23,11 +23,15 @@
 	<string name="record_type_dog">犬</string>
 	<string name="record_type_cat">貓</string>
 
-	<string name="dialog_yes">好</string>
+	<string name="dialog_yes">確定</string>
 	<string name="dialog_no">取消</string>
 
 	<string name="records_download_from_https_title">下載最新資料</string>
 	<string name="records_download_from_https_message">資料來源：台北市動物保護處</string>
 	<string name="records_download_saved">儲存了資料筆數：</string>
+
+	<string name="event_message_visit_market_all">逛了市集</string>
+	<string name="event_message_visit_market_cat">逛了貓咪市集</string>
+	<string name="event_message_visit_market_dog">逛了狗狗市集</string>
 
 </resources>

@@ -24,6 +24,7 @@ import com.edinubuntu.petlove.active.ActiveObjectsLoader;
 import com.edinubuntu.petlove.adapter.RecordsAdapter;
 import com.edinubuntu.petlove.model.AdaptPetsModel;
 import com.edinubuntu.petlove.model.AsyncModel;
+import com.edinubuntu.petlove.object.Event;
 import com.edinubuntu.petlove.object.Record;
 import com.edinubuntu.petlove.util.converter.RecordsJsonConverter;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -107,6 +108,8 @@ public class RecordsFragment extends SherlockFragment implements ActiveObjectsLo
                                     .setNegativeButton(R.string.dialog_no, null)
                                     .show();
                         }
+                        Event visitMarketEvent = new Event(Event.Action.VISIT_MARKET_ALL);
+                        visitMarketEvent.save();
 
                         break;
                     case DROP_ITEM_SELECTION_DOG:
@@ -114,6 +117,9 @@ public class RecordsFragment extends SherlockFragment implements ActiveObjectsLo
                                 getString(R.string.record_type_dog)
                                 +"'").execute();
                         refreshObjectsToViews(dogList);
+
+                        new Event(Event.Action.VISIT_MARKET_DOG).save();
+
                         break;
 
                     case DROP_ITEM_SELECTION_CAT:
@@ -121,6 +127,9 @@ public class RecordsFragment extends SherlockFragment implements ActiveObjectsLo
                                 getString(R.string.record_type_cat)
                                 + "'").execute();
                         refreshObjectsToViews(catList);
+
+                        new Event(Event.Action.VISIT_MARKET_CAT).save();
+
                         break;
                 }
                 return true;

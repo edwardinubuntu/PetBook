@@ -45,6 +45,7 @@ dependencies {
     compile 'com.googlecode.flickrj-android:flickrj-android:2.0.7'
     compile 'com.squareup.picasso:picasso:1.1.1'
     compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
+    compile 'org.ocpsoft.prettytime:prettytime:3.0.2.Final'
     compile fileTree(dir: 'libs', include:'android-async-http-1.4.3.jar')
     compile fileTree(dir: 'libs', include:'ActiveAndroid.jar')
 }
