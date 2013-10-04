@@ -17,6 +17,7 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 import com.activeandroid.ActiveAndroid;
+import com.activeandroid.query.Delete;
 import com.activeandroid.query.Select;
 import com.edinubuntu.petlove.PetLove;
 import com.edinubuntu.petlove.R;
@@ -96,17 +97,7 @@ public class RecordsFragment extends SherlockFragment implements ActiveObjectsLo
                         refreshObjectsToViews(recordList);
 
                         if (recordList.isEmpty()) {
-                            new AlertDialog.Builder(getSherlockActivity())
-                                    .setTitle(getResources().getString(R.string.records_download_from_https_title))
-                                    .setMessage(getResources().getString(R.string.records_download_from_https_message))
-                                    .setPositiveButton(R.string.dialog_yes, new DialogInterface.OnClickListener() {
-                                        @Override
-                                        public void onClick(DialogInterface dialog, int which) {
-                                            loadObjects(adaptPetsModel, false);
-                                        }
-                                    })
-                                    .setNegativeButton(R.string.dialog_no, null)
-                                    .show();
+                            askToDownloadRecords();
                         }
                         Event visitMarketEvent = new Event(Event.Action.VISIT_MARKET_ALL);
                         visitMarketEvent.save();
@@ -137,6 +128,20 @@ public class RecordsFragment extends SherlockFragment implements ActiveObjectsLo
         });
 
         setHasOptionsMenu(true);
+    }
+
+    private void askToDownloadRecords() {
+        new AlertDialog.Builder(getSherlockActivity())
+                .setTitle(getResources().getString(R.string.records_download_from_https_title))
+                .setMessage(getResources().getString(R.string.records_download_from_https_message))
+                .setPositiveButton(R.string.dialog_yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        loadObjects(adaptPetsModel, false);
+                    }
+                })
+                .setNegativeButton(R.string.dialog_no, null)
+                .show();
     }
 
     @Override
@@ -176,6 +181,16 @@ public class RecordsFragment extends SherlockFragment implements ActiveObjectsLo
                 break;
             case R.id.action_load_https_records:
                 loadObjects(adaptPetsModel, false);
+                break;
+            case R.id.action_delete_records:
+                new Delete().from(Record.class).execute();
+                Toast.makeText(getSherlockActivity(), getString(R.string.action_delete_successfully), Toast.LENGTH_LONG).show();
+
+                java.util.List<Record> recordList = new Select().from(Record.class).execute();
+                if (recordList.isEmpty()) {
+                    askToDownloadRecords();
+                }
+
                 break;
             case R.id.action_load_assets_records:
                 try {

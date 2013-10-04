@@ -16,7 +16,7 @@ import com.edinubuntu.petlove.object.Event;
 /**
  * Created by edward_chiang on 13/10/4.
  */
-public class EventsFragement extends SherlockFragment {
+public class EventsFragment extends SherlockFragment {
 
     private EventsAdapter eventAdapter;
 

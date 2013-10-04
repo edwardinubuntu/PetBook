@@ -6,6 +6,9 @@
 	<string name="action_refresh">重新整理</string>
 	<string name="action_load_assets_records">載入檔案</string>
 	<string name="action_load_https_records">下載網路檔案</string>
+	<string name="action_delete_records">刪除全部檔案</string>
+
+	<string name="action_delete_successfully">刪除完畢</string>
 
 	<string name="dropdown_selection_all">全部</string>
 	<string name="dropdown_selection_dog">狗狗</string>
@@ -22,6 +25,8 @@
 
 	<string name="record_type_dog">犬</string>
 	<string name="record_type_cat">貓</string>
+	<string name="record_sex_female">雌</string>
+	<string name="record_sex_male">雄</string>
 
 	<string name="dialog_yes">確定</string>
 	<string name="dialog_no">取消</string>
@@ -33,5 +38,16 @@
 	<string name="event_message_visit_market_all">逛了市集</string>
 	<string name="event_message_visit_market_cat">逛了貓咪市集</string>
 	<string name="event_message_visit_market_dog">逛了狗狗市集</string>
+
+	<string name="choice_ask_sex_female">母的</string>
+	<string name="choice_ask_sex_male">公的</string>
+
+	<string name="choice_ask_age_young">年輕</string>
+	<string name="choice_ask_age_adult">成年</string>
+	<string name="choice_ask_age_old">老年</string>
+
+	<string name="market_choice_question_type">Q1. 飼養什麼類型呢？</string>
+	<string name="market_choice_question_sex">Q2. 想要的性別是？</string>
+	<string name="market_choice_question_age">Q3. 偏好年齡？</string>
 
 </resources>

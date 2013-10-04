@@ -27,6 +27,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+	    <activity
+		    android:name=".activity.MarketActivity"
+		    android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+	        android:label="市集">
+
+	        </activity>
 
 	    <meta-data android:name="AA_DB_NAME" android:value="Pets.db" />
 	    <meta-data android:name="AA_DB_VERSION" android:value="1" />

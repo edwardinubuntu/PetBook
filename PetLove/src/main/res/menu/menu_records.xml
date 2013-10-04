@@ -17,4 +17,9 @@
 	      android:title="@string/action_load_assets_records"
 	      android:orderInCategory="201"
 	      android:showAsAction="never" />
+
+	<item android:id="@+id/action_delete_records"
+	      android:title="@string/action_delete_records"
+	      android:orderInCategory="202"
+	      android:showAsAction="never" />
 </menu>

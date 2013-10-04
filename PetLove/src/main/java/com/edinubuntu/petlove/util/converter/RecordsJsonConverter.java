@@ -37,6 +37,8 @@ public class RecordsJsonConverter {
             record.setNote(recordObject.getString("Note"));
             record.setSex(recordObject.getString("Sex"));
             record.setType(recordObject.getString("Type"));
+            record.setAge(recordObject.getString("Age"));
+            record.setBuild(recordObject.getString("Build"));
 
             Log.d(PetLove.TAG, "Each record: "+record);
 

@@ -1,13 +1,14 @@
 package com.edinubuntu.petlove.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.edinubuntu.petlove.R;
+import com.edinubuntu.petlove.activity.MarketActivity;
 
 /**
  * Created by edward_chiang on 13/10/4.
@@ -23,8 +24,8 @@ public class PetHomeFragment extends SherlockFragment {
         pickPetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager fragmentManager = getSherlockActivity().getSupportFragmentManager();
-                fragmentManager.beginTransaction().replace(R.id.content_frame, new RecordsFragment()).commit();
+                Intent marketIntent = new Intent(getSherlockActivity(), MarketActivity.class);
+                startActivity(marketIntent);
             }
         });
 
