@@ -8,7 +8,10 @@
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-    <uses-sdk
+	<uses-permission android:name="android.permission.SET_ALARM" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+
+	<uses-sdk
         android:minSdkVersion="7"
         android:targetSdkVersion="17" />
 
@@ -33,6 +36,9 @@
 	        android:label="市集">
 
 	        </activity>
+
+	    <service android:name=".service.AlarmNotificationService" />
+	    <receiver android:name=".service.AlarmBroadcastReceiver"/>
 
 	    <meta-data android:name="AA_DB_NAME" android:value="Pets.db" />
 	    <meta-data android:name="AA_DB_VERSION" android:value="1" />

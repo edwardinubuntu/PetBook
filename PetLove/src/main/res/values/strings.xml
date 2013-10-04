@@ -38,6 +38,8 @@
 	<string name="event_message_visit_market_all">逛了市集</string>
 	<string name="event_message_visit_market_cat">逛了貓咪市集</string>
 	<string name="event_message_visit_market_dog">逛了狗狗市集</string>
+	<string name="event_message_visit_question_answer">逛市集，填寫了認養喜好</string>
+	<string name="event_message_visit_suggestions">逛市集，挑選了推薦的寵物</string>
 
 	<string name="choice_ask_sex_female">母的</string>
 	<string name="choice_ask_sex_male">公的</string>
@@ -49,5 +51,17 @@
 	<string name="market_choice_question_type">Q1. 飼養什麼類型呢？</string>
 	<string name="market_choice_question_sex">Q2. 想要的性別是？</string>
 	<string name="market_choice_question_age">Q3. 偏好年齡？</string>
+
+	<string name="market_finish_confirm_title">離開市集</string>
+	<string name="market_finish_confirm_message">一小時只能逛市集一次喔！確定要離開嗎？</string>
+
+	<string name="market_enter_block_title">一小時內只能逛市集一次</string>
+	<string name="market_enter_block_message">可以光顧時通知你嗎？</string>
+	<string name="market_enter_notification_title">逛市集</string>
+	<string name="market_enter_notification_message">一小時內只能逛市集一次，前往吧！</string>
+
+	<string name="alert_suit_title">適合您的</string>
+	<string name="alert_suit_message_1">我們細心挑選了 </string>
+	<string name="alert_suit_message_2"> 隻，慢慢挑選吧！</string>
 
 </resources>

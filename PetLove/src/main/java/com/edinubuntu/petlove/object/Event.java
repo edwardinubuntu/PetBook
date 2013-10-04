@@ -79,6 +79,17 @@ public class Event extends Model {
     public enum Action {
         VISIT_MARKET_ALL,
         VISIT_MARKET_DOG,
-        VISIT_MARKET_CAT
+        VISIT_MARKET_CAT,
+        VISIT_MARKET_QUESTIONS_ANSWER,
+        VISIT_MARKET_SUGGESTIONS
+    }
+
+    @Override
+    public String toString() {
+        return "Event{" +
+                "action=" + action +
+                ", message='" + message + '\'' +
+                ", createdDate=" + createdDate +
+                "} " + super.toString();
     }
 }

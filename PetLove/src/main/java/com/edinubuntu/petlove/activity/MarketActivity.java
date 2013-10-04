@@ -1,5 +1,7 @@
 package com.edinubuntu.petlove.activity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import com.actionbarsherlock.app.ActionBar;
@@ -30,7 +32,23 @@ public class MarketActivity extends SherlockFragmentActivity {
 
         switch (item.getItemId()) {
             case android.R.id.home:
-                finish();
+                new AlertDialog.Builder(this)
+                        .setTitle(getString(R.string.market_finish_confirm_title))
+                        .setMessage(getString(R.string.market_finish_confirm_message))
+                        .setPositiveButton(getString(R.string.dialog_yes), new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                finish();
+                            }
+                        })
+                        .setNegativeButton(getString(R.string.dialog_no), new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        })
+                        .show();
+
                 break;
         }
 

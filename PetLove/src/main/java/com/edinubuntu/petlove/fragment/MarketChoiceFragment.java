@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.edinubuntu.petlove.R;
+import com.edinubuntu.petlove.object.Event;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,7 +27,7 @@ public class MarketChoiceFragment extends SherlockFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragement_market_choice, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_market_choice, container, false);
 
         choiceTypeSpinner = (Spinner)rootView.findViewById(R.id.question_type_spinner);
         ArrayAdapter<String> choiceTypeAdapter = new ArrayAdapter<String>(getSherlockActivity(),
@@ -55,6 +56,9 @@ public class MarketChoiceFragment extends SherlockFragment {
         collectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                new Event(Event.Action.VISIT_MARKET_QUESTIONS_ANSWER).save();
+
                 Map<String, String> queryHashMap = new HashMap<String, String>();
                 switch (choiceTypeSpinner.getSelectedItemPosition()) {
                     case 0:
