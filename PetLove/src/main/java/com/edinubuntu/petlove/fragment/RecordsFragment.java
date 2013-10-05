@@ -94,11 +94,10 @@ public class RecordsFragment extends SherlockFragment implements ActiveObjectsLo
                 switch (itemPosition) {
                     case DROP_ITEM_SELECTION_ALL:
                         java.util.List<Record> recordList = new Select().from(Record.class).execute();
-                        refreshObjectsToViews(recordList);
-
                         if (recordList.isEmpty()) {
                             askToDownloadRecords();
                         }
+                        refreshObjectsToViews(recordList);
                         Event visitMarketEvent = new Event(Event.Action.VISIT_MARKET_ALL);
                         visitMarketEvent.save();
 

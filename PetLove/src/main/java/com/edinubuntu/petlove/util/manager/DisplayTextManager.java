@@ -1,24 +1,25 @@
-package com.edinubuntu.petlove;
+package com.edinubuntu.petlove.util.manager;
 
 import android.content.Context;
+import com.edinubuntu.petlove.R;
 import com.edinubuntu.petlove.object.Event;
 
 /**
  * Created by edward_chiang on 13/10/4.
  */
-public class DisplayText {
+public class DisplayTextManager {
 
     private Context context;
 
-    private static DisplayText instance;
+    private static DisplayTextManager instance;
 
-    public DisplayText(Context context) {
+    public DisplayTextManager(Context context) {
         this.context = context;
     }
 
-    public static synchronized DisplayText newInstance(Context context) {
+    public static synchronized DisplayTextManager newInstance(Context context) {
         if (instance == null) {
-            instance = new DisplayText(context);
+            instance = new DisplayTextManager(context);
         }
         return instance;
     }
@@ -53,6 +54,9 @@ public class DisplayText {
                 break;
             case VISIT_MARKET_SUGGESTIONS:
                 eventText = getContext().getString(R.string.event_message_visit_suggestions);
+                break;
+            case USER_PROFILE_CREATE:
+                eventText = "開始使用";
                 break;
         }
         return eventText;

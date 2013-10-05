@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.Toast;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.activeandroid.query.Select;
-import com.edinubuntu.petlove.DisplayText;
+import com.edinubuntu.petlove.util.manager.DisplayTextManager;
 import com.edinubuntu.petlove.PetLove;
 import com.edinubuntu.petlove.R;
 import com.edinubuntu.petlove.adapter.MarketSuggestionsPagerAdapter;
@@ -122,7 +122,7 @@ public class MarketSuggestionFragment extends SherlockFragment {
         marketSuggestionsPagerAdapter.notifyDataSetChanged();
 
         new AlertDialog.Builder(getSherlockActivity())
-                .setTitle(getString(R.string.alert_suit_title) + DisplayText.newInstance(getSherlockActivity()).getType(queryMap.get("Type")))
+                .setTitle(getString(R.string.alert_suit_title) + DisplayTextManager.newInstance(getSherlockActivity()).getType(queryMap.get("Type")))
                 .setMessage(getString(R.string.alert_suit_message_1)
                         + recordList.size() +
                         getString(R.string.alert_suit_message_2))

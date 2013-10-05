@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-import com.edinubuntu.petlove.DisplayText;
+import com.edinubuntu.petlove.util.manager.DisplayTextManager;
 import com.edinubuntu.petlove.R;
 import com.edinubuntu.petlove.object.Event;
 import org.ocpsoft.prettytime.PrettyTime;
@@ -45,7 +45,7 @@ public class EventsAdapter extends ArrayAdapter<Event> {
 
         TextView messageTextView = (TextView)contentView.findViewById(R.id.event_message_text_view);
         messageTextView.setText(
-                DisplayText.newInstance(getContext()).getMessageText(currentEvent));
+                DisplayTextManager.newInstance(getContext()).getMessageText(currentEvent));
 
         TextView dateTextView = (TextView)contentView.findViewById(R.id.event_date_text_view);
 

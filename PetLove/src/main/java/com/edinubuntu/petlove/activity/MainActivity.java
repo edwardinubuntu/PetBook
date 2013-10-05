@@ -22,6 +22,7 @@ import com.edinubuntu.petlove.fragment.EventsFragment;
 import com.edinubuntu.petlove.fragment.PetHomeFragment;
 import com.edinubuntu.petlove.fragment.RecordsFragment;
 import com.edinubuntu.petlove.object.DrawerAction;
+import com.edinubuntu.petlove.object.Event;
 import com.edinubuntu.petlove.object.Pet;
 import com.edinubuntu.petlove.object.User;
 import com.edinubuntu.petlove.util.manager.UserManager;
@@ -62,6 +63,8 @@ public class MainActivity extends SherlockFragmentActivity
         if (currentPlayer == null) {
             currentPlayer = new User(User.Type.PLAYER);
             currentPlayer.save();
+
+            new Event(Event.Action.USER_PROFILE_CREATE).save();
         }
     }
 
