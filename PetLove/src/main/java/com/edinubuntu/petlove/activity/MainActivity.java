@@ -1,5 +1,6 @@
 package com.edinubuntu.petlove.activity;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -181,6 +182,10 @@ public class MainActivity extends SherlockFragmentActivity
                 } else {
                     drawerLayout.openDrawer(drawerListView);
                 }
+                break;
+            case R.id.action_settings:
+                Intent settingsIntent = new Intent(this, SettingsActivity.class);
+                startActivity(settingsIntent);
                 break;
         }
         return super.onOptionsItemSelected(item);
