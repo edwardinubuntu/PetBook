@@ -53,6 +53,8 @@ public class AlarmNotificationService extends Service {
                 .setContentText(getString(R.string.market_enter_notification_message))
                 .setContentIntent(pendingIntent)
                 .setWhen(System.currentTimeMillis())
+                .setOngoing(false)
+                .setOnlyAlertOnce(true)
                 .build();
 
         notificationManager.notify(0, notification);

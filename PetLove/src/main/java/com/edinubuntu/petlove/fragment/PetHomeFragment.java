@@ -28,7 +28,7 @@ import java.util.Date;
  */
 public class PetHomeFragment extends SherlockFragment {
 
-    public static final long MINUTES_TO_VISIT_AGAIN = 1L;
+    public static final long MINUTES_TO_VISIT_AGAIN = 60L;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -41,7 +41,7 @@ public class PetHomeFragment extends SherlockFragment {
             public void onClick(View v) {
 
                 // Check visit event
-                final Event lastVisitEvent = new Select().from(Event.class).where("Action = 'VISIT_MARKET_SUGGESTIONS'").orderBy("id DESC").executeSingle();
+                final Event lastVisitEvent = new Select().from(Event.class).where("Action = 'VISIT_MARKET_SUGGESTIONS' or Action = 'VISIT_MARKET_QUESTIONS_ANSWER'").orderBy("id DESC").executeSingle();
                 Log.d(PetLove.TAG, "Last visit event: " + lastVisitEvent.toString());
 
                 Date now = Calendar.getInstance().getTime();
