@@ -44,8 +44,13 @@ public class EventsAdapter extends ArrayAdapter<Event> {
         Event currentEvent = getItem(position);
 
         TextView messageTextView = (TextView)contentView.findViewById(R.id.event_message_text_view);
-        messageTextView.setText(
-                DisplayTextManager.newInstance(getContext()).getMessageText(currentEvent));
+
+        StringBuffer messageTextBuffer = new StringBuffer();
+        messageTextBuffer.append(DisplayTextManager.newInstance(getContext()).getMessageText(currentEvent));
+        if (currentEvent.getMessage() != null) {
+            messageTextBuffer.append(currentEvent.getMessage());
+        }
+        messageTextView.setText(messageTextBuffer.toString());
 
         TextView dateTextView = (TextView)contentView.findViewById(R.id.event_date_text_view);
 

@@ -1,6 +1,7 @@
 package com.edinubuntu.petlove.activity;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -13,7 +14,7 @@ import com.activeandroid.ActiveAndroid;
 import com.activeandroid.query.Select;
 import com.edinubuntu.petlove.PetLove;
 import com.edinubuntu.petlove.R;
-import com.edinubuntu.petlove.fragment.MarketChoiceFragment;
+import com.edinubuntu.petlove.fragment.MarketAskFragment;
 import com.edinubuntu.petlove.model.AdaptPetsModel;
 import com.edinubuntu.petlove.model.AsyncModel;
 import com.edinubuntu.petlove.object.Record;
@@ -30,6 +31,8 @@ public class MarketActivity extends SherlockFragmentActivity {
 
     private AdaptPetsModel adaptPetsModel;
 
+    private ProgressDialog waitingDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +42,7 @@ public class MarketActivity extends SherlockFragmentActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.content_frame, new MarketChoiceFragment()).commit();
+        fragmentManager.beginTransaction().replace(R.id.content_frame, new MarketAskFragment()).commit();
 
         // TODO move to manager
         adaptPetsModel = new AdaptPetsModel();
@@ -47,9 +50,17 @@ public class MarketActivity extends SherlockFragmentActivity {
         if (recordList.isEmpty()) {
             askToDownloadRecords();
         }
+
+        waitingDialog = new ProgressDialog(this);
+        waitingDialog.setTitle(getString(R.string.action_load_https_records));
+        waitingDialog.setMessage(getString(R.string.waiting));
+        waitingDialog.setIndeterminate(false);
+        waitingDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+        waitingDialog.setCancelable(false);
     }
 
     private void askToDownloadRecords() {
+
         new AlertDialog.Builder(this)
                 .setTitle(getResources().getString(R.string.records_download_from_https_title))
                 .setMessage(getResources().getString(R.string.records_download_from_https_message))
@@ -98,12 +109,13 @@ public class MarketActivity extends SherlockFragmentActivity {
             public void onStart() {
                 super.onStart();
                 asyncModel.setLoading(true);
+
+                waitingDialog.show();
             }
 
             @Override
             public void onSuccess(String s) {
                 super.onSuccess(s);
-
                 loadJsonResult(s, true);
             }
 
@@ -117,6 +129,7 @@ public class MarketActivity extends SherlockFragmentActivity {
             public void onFinish() {
                 super.onFinish();
                 asyncModel.setLoading(false);
+                waitingDialog.dismiss();
             }
         });
     }

@@ -38,7 +38,7 @@ public class DisplayTextManager {
     }
 
     public String getMessageText(Event event) {
-        String eventText = null;
+        String eventText = new String();
         switch (event.getAction()) {
             case VISIT_MARKET_ALL:
                 eventText = getContext().getString(R.string.event_message_visit_market_all);
@@ -55,8 +55,11 @@ public class DisplayTextManager {
             case VISIT_MARKET_SUGGESTIONS:
                 eventText = getContext().getString(R.string.event_message_visit_suggestions);
                 break;
+            case PET_ADAPT_SUCCESS:
+                eventText = getContext().getString(R.string.event_message_pet_adapt_success);
+                break;
             case USER_PROFILE_CREATE:
-                eventText = "開始使用";
+                eventText = context.getString(R.string.event_message_welcome);
                 break;
         }
         return eventText;

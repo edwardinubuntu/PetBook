@@ -18,7 +18,7 @@ import java.util.Map;
 /**
  * Created by edward_chiang on 13/10/4.
  */
-public class MarketChoiceFragment extends SherlockFragment {
+public class MarketAskFragment extends SherlockFragment {
 
     private Spinner choiceTypeSpinner;
     private Spinner choiceSexSpinner;

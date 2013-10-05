@@ -7,17 +7,19 @@
 	<TextView
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:id="@+id/event_date_text_view"
+		android:id="@+id/event_message_text_view"
+		android:hint="Message"
+		android:textAppearance="?android:attr/textAppearanceMedium"
 		android:layout_centerVertical="true"
-		android:hint="Time"
-		android:layout_toRightOf="@+id/event_message_text_view"
-		android:layout_margin="5dp"/>
+		android:layout_margin="10dp"/>
 
 	<TextView
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:id="@+id/event_message_text_view"
-		android:hint="Message"
+		android:id="@+id/event_date_text_view"
 		android:layout_centerVertical="true"
-		android:layout_margin="10dp"/>
+		android:hint="Time"
+		android:textColor="@color/text_gray"
+		android:layout_toRightOf="@+id/event_message_text_view"
+		android:layout_margin="5dp"/>
 </RelativeLayout>

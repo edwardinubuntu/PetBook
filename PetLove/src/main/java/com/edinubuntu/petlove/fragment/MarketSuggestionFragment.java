@@ -9,10 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.activeandroid.query.Select;
-import com.edinubuntu.petlove.util.manager.DisplayTextManager;
 import com.edinubuntu.petlove.PetLove;
 import com.edinubuntu.petlove.R;
 import com.edinubuntu.petlove.adapter.MarketSuggestionsPagerAdapter;
@@ -20,6 +18,7 @@ import com.edinubuntu.petlove.object.Event;
 import com.edinubuntu.petlove.object.Pet;
 import com.edinubuntu.petlove.object.Record;
 import com.edinubuntu.petlove.object.User;
+import com.edinubuntu.petlove.util.manager.DisplayTextManager;
 
 import java.util.Iterator;
 import java.util.List;
@@ -57,8 +56,8 @@ public class MarketSuggestionFragment extends SherlockFragment {
             @Override
             public void onClick(View v) {
                 new AlertDialog.Builder(getSherlockActivity())
-                        .setTitle("選擇寵物")
-                        .setMessage("一次只能僅能認養一隻，不能換喔！最後確認嗎？")
+                        .setTitle(getSherlockActivity().getString(R.string.market_suggestion_choice_title))
+                        .setMessage(getSherlockActivity().getString(R.string.market_suggestion_choice_message))
                         .setPositiveButton(getString(R.string.dialog_yes), new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -71,12 +70,17 @@ public class MarketSuggestionFragment extends SherlockFragment {
                                 adaptPet.setProfile(currentRecord);
 
                                 // Get Current Player Profile
-                                User currentPlayer = new Select().from(User.class).where("Type = '" +User.Type.PLAYER+ "'").executeSingle();
+                                User currentPlayer = new Select().from(User.class).where("Type = '" + User.Type.PLAYER + "'").executeSingle();
                                 adaptPet.setOwner(currentPlayer);
                                 adaptPet.save();
 
+                                Event adaptEvent = new Event(Event.Action.PET_ADAPT_SUCCESS);
+                                adaptEvent.setMessage(getString(R.string.event_message_pet_name_begin) + adaptPet.getName() +
+                                    getString(R.string.event_message_pet_name_end)
+                                );
+                                adaptEvent.save();
+
                                 // Finish and back
-                                Toast.makeText(getSherlockActivity(), "認養完畢，恭喜新成員到來。", Toast.LENGTH_LONG).show();
                                 getSherlockActivity().finish();
                             }
                         })

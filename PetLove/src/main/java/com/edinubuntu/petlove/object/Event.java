@@ -83,7 +83,8 @@ public class Event extends Model {
         VISIT_MARKET_QUESTIONS_ANSWER,
         VISIT_MARKET_SUGGESTIONS,
 
-        USER_PROFILE_CREATE
+        USER_PROFILE_CREATE,
+        PET_ADAPT_SUCCESS
     }
 
     @Override

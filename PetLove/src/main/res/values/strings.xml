@@ -8,6 +8,11 @@
 	<string name="action_load_https_records">下載網路檔案</string>
 	<string name="action_delete_records">刪除全部檔案</string>
 
+	<string name="activity_label_market">市集</string>
+	<string name="activity_label_settings">設定</string>
+
+	<string name="waiting">請稍候</string>
+
 	<string name="action_delete_successfully">刪除完畢</string>
 
 	<string name="dropdown_selection_all">全部</string>
@@ -35,11 +40,15 @@
 	<string name="records_download_from_https_message">資料來源：台北市動物保護處</string>
 	<string name="records_download_saved">儲存了資料筆數：</string>
 
-	<string name="event_message_visit_market_all">逛了市集</string>
-	<string name="event_message_visit_market_cat">逛了貓咪市集</string>
-	<string name="event_message_visit_market_dog">逛了狗狗市集</string>
-	<string name="event_message_visit_question_answer">逛市集，填寫了認養喜好</string>
-	<string name="event_message_visit_suggestions">逛市集，挑選了推薦的寵物</string>
+	<string name="event_message_visit_market_all">逛了市集。</string>
+	<string name="event_message_visit_market_cat">逛了貓咪市集。</string>
+	<string name="event_message_visit_market_dog">逛了狗狗市集。</string>
+	<string name="event_message_visit_question_answer">逛市集，填寫了認養喜好。</string>
+	<string name="event_message_visit_suggestions">逛市集，挑選了推薦的寵物。</string>
+	<string name="event_message_pet_name_begin">名字叫做</string>
+	<string name="event_message_pet_name_end">。</string>
+	<string name="event_message_welcome">開始使用</string>
+	<string name="event_message_pet_adapt_success">成功領養了寵物。</string>
 
 	<string name="choice_ask_sex_female">母的</string>
 	<string name="choice_ask_sex_male">公的</string>
@@ -70,7 +79,8 @@
 	<string name="setting_category_about">關於</string>
 	<string name="setting_version_title">版本</string>
 	<string name="setting_version_summary">版本號碼</string>
-	<string name="activity_label_market">市集</string>
-	<string name="activity_label_settings">設定</string>
+
+	<string name="market_suggestion_choice_title">選擇寵物</string>
+	<string name="market_suggestion_choice_message">一次只能僅能認養一隻，不能換喔！最後確認嗎？</string>
 
 </resources>
