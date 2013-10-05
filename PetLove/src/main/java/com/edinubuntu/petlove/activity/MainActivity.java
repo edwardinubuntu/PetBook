@@ -15,12 +15,16 @@ import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
+import com.activeandroid.query.Select;
 import com.edinubuntu.petlove.R;
 import com.edinubuntu.petlove.adapter.DrawerActionsAdapter;
 import com.edinubuntu.petlove.fragment.EventsFragment;
 import com.edinubuntu.petlove.fragment.PetHomeFragment;
 import com.edinubuntu.petlove.fragment.RecordsFragment;
 import com.edinubuntu.petlove.object.DrawerAction;
+import com.edinubuntu.petlove.object.Pet;
+import com.edinubuntu.petlove.object.User;
+import com.edinubuntu.petlove.util.manager.UserManager;
 
 import java.util.ArrayList;
 
@@ -51,6 +55,14 @@ public class MainActivity extends SherlockFragmentActivity
         actionBar.setLogo(R.drawable.ic_launcher);
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
+
+        // Initialize create user profile
+        java.util.List<Pet> petList = new Select().from(Pet.class).execute();
+        User currentPlayer = UserManager.getCurrentPlayer();
+        if (currentPlayer == null) {
+            currentPlayer = new User(User.Type.PLAYER);
+            currentPlayer.save();
+        }
     }
 
     @Override
