@@ -7,6 +7,7 @@
 	<string name="action_load_assets_records">載入檔案</string>
 	<string name="action_load_https_records">下載網路檔案</string>
 	<string name="action_delete_records">刪除全部檔案</string>
+	<string name="action_adapt_pet">認養寵物</string>
 
 	<string name="activity_label_market">市集</string>
 	<string name="activity_label_settings">設定</string>
@@ -44,11 +45,13 @@
 	<string name="event_message_visit_market_cat">逛了貓咪市集。</string>
 	<string name="event_message_visit_market_dog">逛了狗狗市集。</string>
 	<string name="event_message_visit_question_answer">逛市集，填寫了認養喜好。</string>
-	<string name="event_message_visit_suggestions">逛市集，挑選了推薦的寵物。</string>
+	<string name="event_message_visit_suggestions">逛市集，看了推薦的寵物。</string>
 	<string name="event_message_pet_name_begin">名字叫做</string>
 	<string name="event_message_pet_name_end">。</string>
 	<string name="event_message_welcome">開始使用</string>
 	<string name="event_message_pet_adapt_success">成功領養了寵物。</string>
+
+	<string name="choice_ask_any">都可以</string>
 
 	<string name="choice_ask_sex_female">母的</string>
 	<string name="choice_ask_sex_male">公的</string>
@@ -57,9 +60,16 @@
 	<string name="choice_ask_age_adult">成年</string>
 	<string name="choice_ask_age_old">老年</string>
 
+	<string name="choice_ask_build_young_small">幼</string>
+	<string name="choice_ask_build_small">小</string>
+	<string name="choice_ask_build_normal">中</string>
+	<string name="choice_ask_build_big">大</string>
+
 	<string name="market_choice_question_type">Q1. 飼養什麼類型呢？</string>
 	<string name="market_choice_question_sex">Q2. 想要的性別是？</string>
 	<string name="market_choice_question_age">Q3. 偏好年齡？</string>
+	<string name="market_choice_question_build">Q4. 體型偏好？</string>
+
 
 	<string name="market_finish_confirm_title">離開市集</string>
 	<string name="market_finish_confirm_message">一小時只能逛市集一次喔！確定要離開嗎？</string>

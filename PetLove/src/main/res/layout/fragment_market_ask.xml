@@ -43,6 +43,18 @@
 		android:layout_height="wrap_content"
 		android:id="@+id/question_age_spinner" />
 
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:text="@string/market_choice_question_build"
+		android:id="@+id/question_4_text_view" />
+
+	<Spinner
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/question_build_spinner" />
+
 	<Button
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
