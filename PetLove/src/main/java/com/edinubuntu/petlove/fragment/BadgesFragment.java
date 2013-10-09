@@ -13,7 +13,6 @@ import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
-import com.activeandroid.query.Delete;
 import com.activeandroid.query.Select;
 import com.edinubuntu.petlove.PetLove;
 import com.edinubuntu.petlove.R;
@@ -88,12 +87,14 @@ public class BadgesFragment extends SherlockFragment {
     }
 
     private void checkBadges() {
+
+        waitingDialog.show();
         AsyncTask checkBadgesTask = new AsyncTask<Void, Void, List<Badge>>() {
 
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
-                waitingDialog.show();
+
             }
 
             /**
@@ -124,7 +125,7 @@ public class BadgesFragment extends SherlockFragment {
                 super.onPostExecute(badges);
 
                 // TODO should we remove old one?
-                new Delete().from(Badge.class).execute();
+//                new Delete().from(Badge.class).execute();
                 for (Badge eachBadge : badges) {
                     // Check before save
                     Badge savedRecord = new Select().from(Badge.class).where("Type = ?", eachBadge.getType()).executeSingle();

@@ -23,10 +23,9 @@ public class BadgeTopInitialPlayChecker implements BadgeChecker {
         mostPlayCountUser.setLimit(10);
         try {
             List<ParseObject> parseObjects = mostPlayCountUser.find();
-            if (parseObjects != null && !parseObjects.isEmpty()) {
-                ParseObject mostPlayUser = parseObjects.get(0);
-                Log.d(PetLove.TAG, "Most Play Count: " + mostPlayUser.getInt("PlayCount"));
-                if (mostPlayUser.getString("AndroidID").equals(ParseObjectManager.getInstance(activity).getUserUniqueId())) {
+            for (ParseObject parseObject: parseObjects) {
+                Log.d(PetLove.TAG, "Most Play Count: " + parseObject.getInt("PlayCount"));
+                if (parseObject.getString("AndroidID").equals(ParseObjectManager.getInstance(activity).getUserUniqueId())) {
                     Log.d(PetLove.TAG, "You are the top 10 oldest play user.");
                     return new Badge(Badge.Type.TOP_10_OLD);
                 }

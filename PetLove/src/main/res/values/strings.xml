@@ -101,4 +101,6 @@
 	<string name="badge_text_top_ten_old_play">初始的主人</string>
 	<string name="badge_text_newbie">新手上路</string>
 
+	<string name="know_contents_check_waiting_title">內容更新</string>
+
 </resources>

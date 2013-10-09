@@ -39,7 +39,9 @@ public class BadgeManager {
         List<Badge> badges = new ArrayList<Badge>();
 
         for (BadgeChecker badgeChecker : badgeCheckers) {
-            progressListener.onCheck(badgeChecker);
+            if  (progressListener!= null) {
+                progressListener.onCheck(badgeChecker);
+            }
             Badge earnedBadge = badgeChecker.check(this.activity);
             if  (earnedBadge != null) {
                 badges.add(earnedBadge);

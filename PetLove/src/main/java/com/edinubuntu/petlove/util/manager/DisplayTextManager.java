@@ -62,6 +62,9 @@ public class DisplayTextManager {
             case USER_PROFILE_CREATE:
                 eventText = context.getString(R.string.event_message_welcome);
                 break;
+            case READ_KNOW_CONTENT:
+                eventText = "閱讀新知識。標題為：";
+                break;
         }
         return eventText;
     }

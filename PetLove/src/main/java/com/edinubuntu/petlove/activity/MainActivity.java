@@ -17,10 +17,7 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
 import com.edinubuntu.petlove.R;
 import com.edinubuntu.petlove.adapter.DrawerActionsAdapter;
-import com.edinubuntu.petlove.fragment.BadgesFragment;
-import com.edinubuntu.petlove.fragment.EventsFragment;
-import com.edinubuntu.petlove.fragment.PetHomeFragment;
-import com.edinubuntu.petlove.fragment.RecordsFragment;
+import com.edinubuntu.petlove.fragment.*;
 import com.edinubuntu.petlove.object.DrawerAction;
 import com.edinubuntu.petlove.object.Event;
 import com.edinubuntu.petlove.object.User;
@@ -171,6 +168,9 @@ public class MainActivity extends SherlockFragmentActivity
             }
             case PET_EVENTS:
                 fragment = new EventsFragment();
+                break;
+            case KNOWLEDGE_CONTENTS:
+                fragment = new KnowContentFragment();
                 break;
         }
         if (fragment != null) {
