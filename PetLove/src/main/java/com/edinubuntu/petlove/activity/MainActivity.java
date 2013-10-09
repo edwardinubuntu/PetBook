@@ -11,6 +11,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
@@ -25,6 +26,7 @@ import com.edinubuntu.petlove.util.manager.ParseObjectManager;
 import com.edinubuntu.petlove.util.manager.UserManager;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static com.edinubuntu.petlove.object.DrawerAction.ActionType.*;
 
@@ -33,13 +35,23 @@ public class MainActivity extends SherlockFragmentActivity
 
     private DrawerLayout drawerLayout;
 
-    private ListView drawerListView;
-
     private ActionBarDrawerToggle drawerToggle;
 
-    private ArrayList<DrawerAction> drawerActionList;
+    private RelativeLayout drawerListViewLayout;
 
-    private DrawerActionsAdapter drawerListViewAdapter;
+    /*
+    * Upper
+     */
+    private List<DrawerAction> drawerUpperActionList;
+    private DrawerActionsAdapter drawerUpperListViewAdapter;
+    private ListView drawerUpperListView;
+
+    /*
+    * Bottom
+     */
+    private List<DrawerAction> drawerBottomActionList;
+    private ListView drawerBottomListView;
+    private DrawerActionsAdapter drawerBottomListViewAdapter;
 
     private String fragmentTitle;
 
@@ -74,13 +86,14 @@ public class MainActivity extends SherlockFragmentActivity
         drawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
         drawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
 
-        drawerListView = (ListView)findViewById(R.id.left_drawer);
+        drawerListViewLayout = (RelativeLayout)findViewById(R.id.left_drawer_layout);
 
-        drawerActionList = new ArrayList<DrawerAction>();
-        drawerListViewAdapter = new DrawerActionsAdapter(this, drawerActionList);
-
-        drawerListView.setAdapter(drawerListViewAdapter);
-        drawerListView.setOnItemClickListener(new ListView.OnItemClickListener() {
+        // Upper
+        drawerUpperListView = (ListView)findViewById(R.id.left_top_list_view);
+        drawerUpperActionList = new ArrayList<DrawerAction>();
+        drawerUpperListViewAdapter = new DrawerActionsAdapter(this, drawerUpperActionList);
+        drawerUpperListView.setAdapter(drawerUpperListViewAdapter);
+        drawerUpperListView.setOnItemClickListener(new ListView.OnItemClickListener() {
             /**
              * Callback method to be invoked when an item in this AdapterView has
              * been clicked.
@@ -97,11 +110,41 @@ public class MainActivity extends SherlockFragmentActivity
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                drawerListView.setItemChecked(position, true);
-                drawerLayout.closeDrawer(drawerListView);
+                drawerUpperListView.setItemChecked(position, true);
+                drawerLayout.closeDrawer(drawerListViewLayout);
 
                 // Update title
-                selectDrawerItem(position);
+                selectDrawerItem(drawerUpperListView, position);
+            }
+        });
+
+        // Bottom
+        drawerBottomListView = (ListView)findViewById(R.id.left_bottom_list_view);
+        drawerBottomActionList = new ArrayList<DrawerAction>();
+        drawerBottomListViewAdapter = new DrawerActionsAdapter(this, drawerBottomActionList);
+        drawerBottomListView.setAdapter(drawerBottomListViewAdapter);
+        drawerBottomListView.setOnItemClickListener(new ListView.OnItemClickListener() {
+            /**
+             * Callback method to be invoked when an item in this AdapterView has
+             * been clicked.
+             * <p/>
+             * Implementers can call getItemAtPosition(position) if they need
+             * to access the data associated with the selected item.
+             *
+             * @param parent   The AdapterView where the click happened.
+             * @param view     The view within the AdapterView that was clicked (this
+             *                 will be a view provided by the adapter)
+             * @param position The position of the view in the adapter.
+             * @param id       The row id of the item that was clicked.
+             */
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                drawerBottomListView.setItemChecked(position, true);
+                drawerLayout.closeDrawer(drawerListViewLayout);
+
+                // Update title
+                selectDrawerItem(drawerBottomListView, position);
             }
         });
 
@@ -132,51 +175,68 @@ public class MainActivity extends SherlockFragmentActivity
         // Refresh when all object initialize.
         refreshDrawerActions();
 
-        if (savedInstanceState == null && !drawerActionList.isEmpty()) {
-            selectDrawerItem(0);
+        if (savedInstanceState == null && !drawerUpperActionList.isEmpty()) {
+            selectDrawerItem(drawerUpperListView, 0);
         }
 
         drawerToggle.syncState();
     }
 
-    private void selectDrawerItem(int position) {
+    private void selectDrawerItem(ListView listView, int position) {
 
         // Display title by default
         getSupportActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
 
-        fragmentTitle = drawerActionList.get(position).getTitle();
-
-        setTitle(fragmentTitle);
-
-        // If user profile them open user
-        DrawerAction drawerAction = drawerActionList.get(position);
-
         Fragment fragment = null;
-        switch (drawerAction.getActionType()) {
-            case HOME: {
-                fragment = new PetHomeFragment();
-                break;
+        if (listView == drawerUpperListView) {
+            // If user profile them open user
+            DrawerAction drawerAction = drawerUpperActionList.get(position);
+            fragmentTitle = drawerAction.getTitle();
+            setTitle(fragmentTitle);
+            switch (drawerAction.getActionType()) {
+                case HOME: {
+                    fragment = new PetHomeFragment();
+                    break;
+                }
+                case PET_MARKETS: {
+                    fragment = new RecordsFragment();
+                    break;
+                }
+                case BADGES: {
+                    fragment = new BadgesFragment();
+                    break;
+                }
+                case PET_EVENTS:
+                    fragment = new EventsFragment();
+                    break;
+                case KNOWLEDGE_CONTENTS:
+                    fragment = new KnowContentFragment();
+                    break;
             }
-            case PET_MARKETS: {
-                fragment = new RecordsFragment();
-                break;
+
+            drawerUpperListView.setItemChecked(position, true);
+        } else if (listView == drawerBottomListView) {
+
+            DrawerAction drawerAction = drawerBottomActionList.get(position);
+            switch (drawerAction.getActionType()) {
+                case SETTINGS: {
+                    Intent settingsIntent = new Intent(this, SettingsActivity.class);
+                    startActivity(settingsIntent);
+                    break;
+                }
+                default:
+                    fragmentTitle = drawerAction.getTitle();
+                    setTitle(fragmentTitle);
+                    break;
             }
-            case BADGES: {
-                fragment = new BadgesFragment();
-                break;
-            }
-            case PET_EVENTS:
-                fragment = new EventsFragment();
-                break;
-            case KNOWLEDGE_CONTENTS:
-                fragment = new KnowContentFragment();
-                break;
+
+            drawerBottomListView.setItemChecked(position, true);
         }
+
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
-            drawerListView.setItemChecked(position, true);
         }
     }
 
@@ -197,16 +257,12 @@ public class MainActivity extends SherlockFragmentActivity
         switch (item.getItemId()) {
             case R.id.homeAsUp:
             case android.R.id.home:
-                boolean drawerOpen = drawerLayout.isDrawerOpen(drawerListView);
+                boolean drawerOpen = drawerLayout.isDrawerOpen(drawerListViewLayout);
                 if (drawerOpen) {
-                    drawerLayout.closeDrawer(drawerListView);
+                    drawerLayout.closeDrawer(drawerListViewLayout);
                 } else {
-                    drawerLayout.openDrawer(drawerListView);
+                    drawerLayout.openDrawer(drawerListViewLayout);
                 }
-                break;
-            case R.id.action_settings:
-                Intent settingsIntent = new Intent(this, SettingsActivity.class);
-                startActivity(settingsIntent);
                 break;
         }
         return super.onOptionsItemSelected(item);
@@ -218,15 +274,19 @@ public class MainActivity extends SherlockFragmentActivity
     }
 
     private void refreshDrawerActions() {
-        drawerActionList.clear();
-        drawerActionList.add(new DrawerAction(getString(R.string.drawer_home), HOME));
-        drawerActionList.add(new DrawerAction(getString(R.string.drawer_pet_events), PET_EVENTS));
-        drawerActionList.add(new DrawerAction(getString(R.string.drawer_knowledge_content), KNOWLEDGE_CONTENTS));
-        drawerActionList.add(new DrawerAction(getString(R.string.drawer_badges), BADGES));
-        drawerActionList.add(new DrawerAction(getString(R.string.drawer_friends), FRIENDS_PET));
-//        drawerActionList.add(new DrawerAction(getString(R.string.drawer_records), PET_MARKETS));
+        drawerUpperActionList.clear();
+        drawerUpperActionList.add(new DrawerAction(getString(R.string.drawer_home), HOME));
+        drawerUpperActionList.add(new DrawerAction(getString(R.string.drawer_pet_events), PET_EVENTS));
+        drawerUpperActionList.add(new DrawerAction(getString(R.string.drawer_knowledge_content), KNOWLEDGE_CONTENTS));
+        drawerUpperActionList.add(new DrawerAction(getString(R.string.drawer_badges), BADGES));
+//        drawerUpperActionList.add(new DrawerAction(getString(R.string.drawer_records), PET_MARKETS));
+        drawerUpperListViewAdapter.setObjectList(drawerUpperActionList);
+        drawerUpperListViewAdapter.notifyDataSetChanged();
 
-        drawerListViewAdapter.setObjectList(drawerActionList);
-        drawerListViewAdapter.notifyDataSetChanged();
+        drawerBottomActionList.clear();
+        drawerBottomActionList.add(new DrawerAction(getString(R.string.drawer_friends), FRIENDS_PET));
+        drawerBottomActionList.add(new DrawerAction(getString(R.string.drawer_settings), SETTINGS));
+        drawerBottomListViewAdapter.setObjectList(drawerBottomActionList);
+        drawerBottomListViewAdapter.notifyDataSetChanged();
     }
 }

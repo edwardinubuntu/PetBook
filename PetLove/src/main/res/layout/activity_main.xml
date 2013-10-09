@@ -12,13 +12,28 @@
 		android:layout_width="match_parent"
 		android:layout_height="match_parent" />
 
-	<ListView
-		android:id="@+id/left_drawer"
+	<RelativeLayout
+		android:id="@+id/left_drawer_layout"
 		android:layout_width="240dp"
 		android:layout_height="match_parent"
-		android:layout_gravity="start"
+		android:layout_gravity="start" >
+
+	<ListView
+		android:id="@+id/left_top_list_view"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
 		android:choiceMode="singleChoice"
 		android:divider="@color/list_view_divider_gray"
 		android:dividerHeight="1dp"
 		android:background="@color/list_view_drawer_gray"/>
+
+
+	<ListView
+		android:id="@+id/left_bottom_list_view"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"/>
+
+	</RelativeLayout>
+
 </android.support.v4.widget.DrawerLayout>

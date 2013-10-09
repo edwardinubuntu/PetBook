@@ -46,11 +46,13 @@ public class DrawerAction {
             imageResource = R.drawable.ic_action_bookmark;
         } else if (getActionType() == ActionType.KNOWLEDGE_CONTENTS) {
             imageResource = R.drawable.ic_action_search;
+        } else if (getActionType() == ActionType.SETTINGS) {
+            imageResource = R.drawable.ic_action_settings;
         }
         return imageResource;
     }
 
     public enum ActionType {
-        HOME, PET_EVENTS, PET_MARKETS, FRIENDS_PET, BADGES, KNOWLEDGE_CONTENTS
+        HOME, PET_EVENTS, PET_MARKETS, FRIENDS_PET, BADGES, KNOWLEDGE_CONTENTS, SETTINGS
     }
 }

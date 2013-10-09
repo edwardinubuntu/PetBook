@@ -29,6 +29,7 @@
 	<string name="drawer_knowledge_content">知識學習</string>
 	<string name="drawer_friends">好友的寵物</string>
 	<string name="drawer_records">市集</string>
+	<string name="drawer_settings">設定</string>
 
 	<string name="record_type_dog">犬</string>
 	<string name="record_type_cat">貓</string>
