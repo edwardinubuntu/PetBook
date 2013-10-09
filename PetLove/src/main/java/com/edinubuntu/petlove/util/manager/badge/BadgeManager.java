@@ -33,6 +33,7 @@ public class BadgeManager {
         badgeCheckers.add(new BadgeNewbieChecker());
         badgeCheckers.add(new BadgeMostPlayChecker());
         badgeCheckers.add(new BadgeTopInitialPlayChecker());
+        badgeCheckers.add(new BadgeStudentChecker());
     }
 
     public List<Badge> checkUserBadges() {

@@ -40,6 +40,7 @@ public class Badge extends Model{
     public enum Type {
         MOST_PLAY_COUNT,
         TOP_10_OLD,
-        NEWBIE
+        NEWBIE,
+        STUDENT;
     }
 }

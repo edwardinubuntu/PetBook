@@ -81,6 +81,9 @@ public class DisplayTextManager {
             case NEWBIE:
                 badgeText = context.getString(R.string.badge_text_newbie);
                 break;
+            case STUDENT:
+                badgeText = "學習生";
+                break;
         }
         return badgeText;
     }
