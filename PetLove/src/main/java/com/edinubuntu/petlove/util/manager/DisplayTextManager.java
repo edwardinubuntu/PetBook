@@ -2,6 +2,7 @@ package com.edinubuntu.petlove.util.manager;
 
 import android.content.Context;
 import com.edinubuntu.petlove.R;
+import com.edinubuntu.petlove.object.Badge;
 import com.edinubuntu.petlove.object.Event;
 
 /**
@@ -63,5 +64,21 @@ public class DisplayTextManager {
                 break;
         }
         return eventText;
+    }
+
+    public String getBadgeText(Badge badge) {
+        String badgeText = new String();
+        switch (badge.getType()) {
+            case MOST_PLAY_COUNT:
+                badgeText = context.getString(R.string.badge_text_most_play_count);
+                break;
+            case TOP_10_OLD:
+                badgeText = context.getString(R.string.badge_text_top_ten_old_play);
+                break;
+            case NEWBIE:
+                badgeText = context.getString(R.string.badge_text_newbie);
+                break;
+        }
+        return badgeText;
     }
 }

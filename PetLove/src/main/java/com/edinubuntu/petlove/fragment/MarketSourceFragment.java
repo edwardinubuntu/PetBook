@@ -64,7 +64,7 @@ public class MarketSourceFragment extends SherlockFragment {
                             break;
                         case MarketSource.TYPE_TAIPEI_OPEN_DATA:
 
-                            getSherlockActivity().getSupportActionBar().setTitle(marketSource.getType());
+                            getSherlockActivity().getSupportActionBar().setTitle(marketSource.getTitle());
 
                             FragmentManager fragmentManager = getSherlockActivity().getSupportFragmentManager();
                             MarketAskFragment fragment = new MarketAskFragment();

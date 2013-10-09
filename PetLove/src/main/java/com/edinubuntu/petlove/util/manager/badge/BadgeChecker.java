@@ -8,4 +8,6 @@ import com.edinubuntu.petlove.object.Badge;
  */
 public interface BadgeChecker {
     public Badge check(Activity activity);
+
+    public int getResourceName();
 }

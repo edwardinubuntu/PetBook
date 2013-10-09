@@ -96,4 +96,9 @@
 	<string name="market_source_taipei_open_data_title">台北市動物之家</string>
 	<string name="market_source_self_title">自家寵物</string>
 
+	<string name="badge_check_waiting_title">計算成就徽章</string>
+	<string name="badge_text_most_play_count">用功的主人</string>
+	<string name="badge_text_top_ten_old_play">初始的主人</string>
+	<string name="badge_text_newbie">新手上路</string>
+
 </resources>

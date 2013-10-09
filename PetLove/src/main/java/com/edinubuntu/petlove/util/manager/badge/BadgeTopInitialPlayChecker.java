@@ -13,23 +13,22 @@ import com.parse.ParseQuery;
 import java.util.List;
 
 /**
- * Created by edward_chiang on 13/10/6.
+ * Created by edward_chiang on 13/10/9.
  */
-public class BadgeMostPlayChecker implements BadgeChecker {
-
+public class BadgeTopInitialPlayChecker implements BadgeChecker {
     @Override
-    public Badge check(final Activity activity) {
-
+    public Badge check(Activity activity) {
         ParseQuery<ParseObject> mostPlayCountUser = ParseQuery.getQuery("UserObject");
-        mostPlayCountUser.orderByDescending("PlayCount");
+        mostPlayCountUser.orderByAscending("UserCreatedAt");
         mostPlayCountUser.setLimit(10);
         try {
             List<ParseObject> parseObjects = mostPlayCountUser.find();
-            for (ParseObject parseObject: parseObjects) {
-                Log.d(PetLove.TAG, "Most Play Count: " + parseObject.getInt("PlayCount"));
-                if (parseObject.getString("AndroidID").equals(ParseObjectManager.getInstance(activity).getUserUniqueId())) {
-                    Log.d(PetLove.TAG, "You are the most play user.");
-                    return new Badge(Badge.Type.MOST_PLAY_COUNT);
+            if (parseObjects != null && !parseObjects.isEmpty()) {
+                ParseObject mostPlayUser = parseObjects.get(0);
+                Log.d(PetLove.TAG, "Most Play Count: " + mostPlayUser.getInt("PlayCount"));
+                if (mostPlayUser.getString("AndroidID").equals(ParseObjectManager.getInstance(activity).getUserUniqueId())) {
+                    Log.d(PetLove.TAG, "You are the top 10 oldest play user.");
+                    return new Badge(Badge.Type.TOP_10_OLD);
                 }
             }
 
@@ -42,7 +41,6 @@ public class BadgeMostPlayChecker implements BadgeChecker {
 
     @Override
     public int getResourceName() {
-        return R.string.badge_text_most_play_count;
+        return R.string.badge_text_top_ten_old_play;
     }
-
 }

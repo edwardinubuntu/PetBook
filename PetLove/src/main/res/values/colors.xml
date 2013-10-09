@@ -9,4 +9,5 @@
 	<color name="text_white">#FFFFFF</color>
 	<color name="text_gray">#404040</color>
 	<color name="background_gray">#CFCFCF</color>
+	<color name="badge_yellow">#FF7D00</color>
 </resources>
