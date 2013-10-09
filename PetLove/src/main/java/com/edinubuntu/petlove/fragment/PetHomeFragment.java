@@ -145,7 +145,8 @@ public class PetHomeFragment extends SherlockFragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_adapt_pet:
-                goMarket();
+                Intent marketIntent = new Intent(getSherlockActivity(), MarketActivity.class);
+                startActivity(marketIntent);
                 break;
         }
         return super.onOptionsItemSelected(item);

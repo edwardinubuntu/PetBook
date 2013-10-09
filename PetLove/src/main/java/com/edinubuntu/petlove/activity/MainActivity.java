@@ -221,9 +221,10 @@ public class MainActivity extends SherlockFragmentActivity
         drawerActionList.clear();
         drawerActionList.add(new DrawerAction(getString(R.string.drawer_home), HOME));
         drawerActionList.add(new DrawerAction(getString(R.string.drawer_pet_events), PET_EVENTS));
+        drawerActionList.add(new DrawerAction(getString(R.string.drawer_knowledge_content), KNOWLEDGE_CONTENTS));
         drawerActionList.add(new DrawerAction(getString(R.string.drawer_badges), BADGES));
         drawerActionList.add(new DrawerAction(getString(R.string.drawer_friends), FRIENDS_PET));
-        drawerActionList.add(new DrawerAction(getString(R.string.drawer_records), PET_MARKETS));
+//        drawerActionList.add(new DrawerAction(getString(R.string.drawer_records), PET_MARKETS));
 
         drawerListViewAdapter.setObjectList(drawerActionList);
         drawerListViewAdapter.notifyDataSetChanged();

@@ -25,7 +25,8 @@
 
 	<string name="drawer_home">首頁</string>
 	<string name="drawer_pet_events">日記</string>
-	<string name="drawer_badges">成就</string>
+	<string name="drawer_badges">目標與成就</string>
+	<string name="drawer_knowledge_content">知識學習</string>
 	<string name="drawer_friends">好友的寵物</string>
 	<string name="drawer_records">市集</string>
 
@@ -92,5 +93,7 @@
 
 	<string name="market_suggestion_choice_title">選擇寵物</string>
 	<string name="market_suggestion_choice_message">一次只能僅能認養一隻，不能換喔！最後確認嗎？</string>
+	<string name="market_source_taipei_open_data_title">台北市動物之家</string>
+	<string name="market_source_self_title">自家寵物</string>
 
 </resources>
