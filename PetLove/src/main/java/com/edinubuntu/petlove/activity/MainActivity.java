@@ -15,16 +15,16 @@ import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
-import com.activeandroid.query.Select;
 import com.edinubuntu.petlove.R;
 import com.edinubuntu.petlove.adapter.DrawerActionsAdapter;
+import com.edinubuntu.petlove.fragment.BadgesFragment;
 import com.edinubuntu.petlove.fragment.EventsFragment;
 import com.edinubuntu.petlove.fragment.PetHomeFragment;
 import com.edinubuntu.petlove.fragment.RecordsFragment;
 import com.edinubuntu.petlove.object.DrawerAction;
 import com.edinubuntu.petlove.object.Event;
-import com.edinubuntu.petlove.object.Pet;
 import com.edinubuntu.petlove.object.User;
+import com.edinubuntu.petlove.util.manager.ParseObjectManager;
 import com.edinubuntu.petlove.util.manager.UserManager;
 
 import java.util.ArrayList;
@@ -57,8 +57,9 @@ public class MainActivity extends SherlockFragmentActivity
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
 
+        ParseObjectManager.getInstance(this).initialize();
+
         // Initialize create user profile
-        java.util.List<Pet> petList = new Select().from(Pet.class).execute();
         User currentPlayer = UserManager.getCurrentPlayer();
         if (currentPlayer == null) {
             currentPlayer = new User(User.Type.PLAYER);
@@ -66,6 +67,7 @@ public class MainActivity extends SherlockFragmentActivity
 
             new Event(Event.Action.USER_PROFILE_CREATE).save();
         }
+        ParseObjectManager.getInstance(this).saveAndUpdateUser(currentPlayer);
     }
 
     @Override
@@ -163,6 +165,10 @@ public class MainActivity extends SherlockFragmentActivity
                 fragment = new RecordsFragment();
                 break;
             }
+            case BADGES: {
+                fragment = new BadgesFragment();
+                break;
+            }
             case PET_EVENTS:
                 fragment = new EventsFragment();
                 break;
@@ -215,9 +221,10 @@ public class MainActivity extends SherlockFragmentActivity
         drawerActionList.clear();
         drawerActionList.add(new DrawerAction(getString(R.string.drawer_home), HOME));
         drawerActionList.add(new DrawerAction(getString(R.string.drawer_pet_events), PET_EVENTS));
+        drawerActionList.add(new DrawerAction(getString(R.string.drawer_knowledge_content), KNOWLEDGE_CONTENTS));
         drawerActionList.add(new DrawerAction(getString(R.string.drawer_badges), BADGES));
         drawerActionList.add(new DrawerAction(getString(R.string.drawer_friends), FRIENDS_PET));
-        drawerActionList.add(new DrawerAction(getString(R.string.drawer_records), PET_MARKETS));
+//        drawerActionList.add(new DrawerAction(getString(R.string.drawer_records), PET_MARKETS));
 
         drawerListViewAdapter.setObjectList(drawerActionList);
         drawerListViewAdapter.notifyDataSetChanged();
