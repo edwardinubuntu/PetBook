@@ -35,13 +35,17 @@
 		android:layout_height="match_parent"
 		android:id="@+id/pet_home_layout"
 		android:visibility="visible"
+	    android:background="@color/theme_brown_4"
 		>
 
 		<ImageView
-			android:layout_width="fill_parent"
-			android:layout_height="fill_parent"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
 			android:id="@+id/pet_image_view"
-			android:scaleType="fitCenter" />
+			android:layout_marginTop="20dp"
+			android:padding="3dp"
+			android:background="@drawable/rounded_pet_avatar"
+			android:layout_centerHorizontal="true" />
 
 	</RelativeLayout>
 

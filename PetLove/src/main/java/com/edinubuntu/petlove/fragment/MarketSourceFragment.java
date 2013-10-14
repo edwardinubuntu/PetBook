@@ -29,7 +29,7 @@ public class MarketSourceFragment extends SherlockFragment {
         super.onCreate(savedInstanceState);
 
         DisplayMetrics metrics = getResources().getDisplayMetrics();
-        GRID_VIEW_TWO_COLUMN_PER_PAGE_WIDTH = metrics.widthPixels / 3;
+        GRID_VIEW_TWO_COLUMN_PER_PAGE_WIDTH = metrics.widthPixels / 2;
 
         marketSources = new MarketSource[]{
                 new MarketSource(MarketSource.TYPE_SELF, getSherlockActivity()),

@@ -1,0 +1,32 @@
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:id="@+id/pet_home_empty_layout"
+		>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="您還沒有寵物喔？"
+			android:id="@+id/pet_home_empty_text_view"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_centerVertical="true"
+			android:layout_centerHorizontal="true"/>
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="去市集逛逛吧！"
+			android:id="@+id/pet_home_go_pick_button"
+			android:layout_margin="30dp"
+			android:layout_alignTop="@+id/pet_home_empty_text_view"
+			android:layout_centerHorizontal="true"/>
+
+	</RelativeLayout>
+
+</RelativeLayout>

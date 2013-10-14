@@ -1,7 +1,9 @@
 package com.edinubuntu.petlove.fragment;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
@@ -81,6 +83,7 @@ public class MarketSuggestionFragment extends SherlockFragment {
                                 adaptEvent.save();
 
                                 // Finish and back
+                                getSherlockActivity().setResult(Activity.RESULT_OK, new Intent());
                                 getSherlockActivity().finish();
                             }
                         })
@@ -104,39 +107,42 @@ public class MarketSuggestionFragment extends SherlockFragment {
         new Event(Event.Action.VISIT_MARKET_SUGGESTIONS).save();
 
         StringBuffer whereBuffer = new StringBuffer();
-        Iterator it = queryMap.entrySet().iterator();
-        while (it.hasNext()) {
-            Map.Entry pairs = (Map.Entry)it.next();
-            whereBuffer.append(pairs.getKey() + "= '"+pairs.getValue()+"'");
+        if  (queryMap != null) {
+            Iterator it = queryMap.entrySet().iterator();
+            while (it.hasNext()) {
+                Map.Entry pairs = (Map.Entry)it.next();
+                whereBuffer.append(pairs.getKey() + "= '"+pairs.getValue()+"'");
 
-            if (it.hasNext()) {
-                whereBuffer.append(" and ");
+                if (it.hasNext()) {
+                    whereBuffer.append(" and ");
+                }
             }
+
+            recordList = new Select().from(Record.class)
+                    .where(whereBuffer.toString())
+                    .orderBy("RANDOM()")
+                    .limit(10)
+                    .execute();
+            Log.d(PetLove.TAG, "Number suggest :" + recordList.size());
+            Log.d(PetLove.TAG, "We suggest :" + recordList.toString());
+
+            marketSuggestionsPagerAdapter.setRecords(recordList);
+            marketSuggestionsPagerAdapter.notifyDataSetChanged();
+
+            new AlertDialog.Builder(getSherlockActivity())
+                    .setTitle(getString(R.string.alert_suit_title) + DisplayTextManager.newInstance(getSherlockActivity()).getType(queryMap.get("Type")))
+                    .setMessage(getString(R.string.alert_suit_message_1)
+                            + recordList.size() +
+                            getString(R.string.alert_suit_message_2))
+
+                    .setPositiveButton(getString(R.string.dialog_yes), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                        }
+                    })
+                    .show();
         }
 
-        recordList = new Select().from(Record.class)
-                .where(whereBuffer.toString())
-                .orderBy("RANDOM()")
-                .limit(10)
-                .execute();
-        Log.d(PetLove.TAG, "Number suggest :" + recordList.size());
-        Log.d(PetLove.TAG, "We suggest :" + recordList.toString());
-
-        marketSuggestionsPagerAdapter.setRecords(recordList);
-        marketSuggestionsPagerAdapter.notifyDataSetChanged();
-
-        new AlertDialog.Builder(getSherlockActivity())
-                .setTitle(getString(R.string.alert_suit_title) + DisplayTextManager.newInstance(getSherlockActivity()).getType(queryMap.get("Type")))
-                .setMessage(getString(R.string.alert_suit_message_1)
-                        + recordList.size() +
-                        getString(R.string.alert_suit_message_2))
-
-                .setPositiveButton(getString(R.string.dialog_yes), new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                    }
-                })
-                .show();
     }
 
     public void setQueryMap(Map<String, String> queryMap) {

@@ -2,12 +2,13 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
+              android:padding="5dp"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
 	<ImageView
 		android:id="@+id/market_source_image_view"
-		android:scaleType="fitCenter"
+		android:scaleType="centerInside"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" />
 
