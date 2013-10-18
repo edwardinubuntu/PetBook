@@ -4,8 +4,9 @@
   -->
 
 <resources>
-	<color name="list_view_divider_gray">#595959</color>
-	<color name="list_view_drawer_gray">#404040</color>
+	<color name="list_view_divider_gray">#F3D9AD</color>
+	<color name="list_view_drawer_gray">#6B4F31</color>
+
 	<color name="text_white">#FFFFFF</color>
 	<color name="text_gray">#404040</color>
 	<color name="background_gray">#CFCFCF</color>
@@ -15,4 +16,6 @@
 	<color name="theme_brown_2">#985934</color>
 	<color name="theme_brown_3">#B66D4C</color>
 	<color name="theme_brown_4">#F3D9AD</color>
+
+	<color name="pressed_pet">#CC33B5E5</color>
 </resources>
